@@ -1,0 +1,77 @@
+﻿{
+  "app": {
+    "title": "Luyện Thi Java Oracle",
+    "subtitle": "Nền tảng luyện thi OCA/OCP/OCM"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "courses": "Khóa học",
+    "history": "Lịch sử",
+    "pricing": "Nâng cấp",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất"
+  },
+  "common": {
+    "start": "Bắt đầu",
+    "next": "Câu tiếp",
+    "back": "Quay lại",
+    "submit": "Nộp bài",
+    "loading": "Đang tải...",
+    "locked": "Khóa nội dung",
+    "unlocked": "Đã mở",
+    "minutes": "phút",
+    "question": "Câu"
+  },
+  "home": {
+    "headline": "Ôn tập thông minh, thi thử sát đề",
+    "description": "Luyện theo từng chứng chỉ, mock exam có chấm điểm tự động và lịch sử chi tiết.",
+    "ctaPrimary": "Xem danh sách khóa học",
+    "ctaSecondary": "Xem gói premium"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mật khẩu",
+    "name": "Tên hiển thị",
+    "loginTitle": "Đăng nhập",
+    "registerTitle": "Đăng ký tài khoản",
+    "noAccount": "Chưa có tài khoản?",
+    "hasAccount": "Đã có tài khoản?"
+  },
+  "course": {
+    "practice": "Ôn tập",
+    "mock": "Thi thử",
+    "lessons": "Bài học",
+    "topics": "Chủ đề",
+    "unlock": "Mở khóa khóa học",
+    "freeAttemptInfo": "Tài khoản free được 2 lần thi thử mỗi khóa học"
+  },
+  "practice": {
+    "title": "Chế độ ôn tập",
+    "hint": "Chọn đáp án và submit từng câu để xem giải thích ngay"
+  },
+  "mock": {
+    "title": "Mock Exam",
+    "requireLogin": "Bạn cần đăng nhập để vào thi thử",
+    "blocked": "Bạn đã dùng hết lượt thi free cho khóa học này. Hãy nâng cấp để tiếp tục.",
+    "submitConfirm": "Bạn chắc chắn muốn nộp bài?"
+  },
+  "result": {
+    "title": "Kết quả bài thi",
+    "score": "Điểm",
+    "passed": "Đạt",
+    "failed": "Chưa đạt",
+    "detailLocked": "Chi tiết giải đáp đã bị khóa. Nâng cấp để mở khóa."
+  },
+  "pricing": {
+    "title": "Nâng cấp premium",
+    "full": "Gói full tất cả khóa học",
+    "perCourse": "Gói theo khóa học",
+    "buyNow": "Mua ngay",
+    "benefits": "Thi thử không giới hạn, xem lịch sử và giải đáp chi tiết"
+  },
+  "history": {
+    "title": "Lịch sử thi",
+    "locked": "Lịch sử đã được lưu, nhưng chỉ hiển thị cho tài khoản đã mua gói"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "questions": [
+    {
+      "topic": "Assessment Test",
+      "question_number": 1,
+      "question": "Which statement about Java local variables is correct?",
+      "options": {
+        "A": "Local variables receive default values automatically.",
+        "B": "A local variable must be initialized before first use.",
+        "C": "Local variables are always final.",
+        "D": "Local variables can only be declared in methods.",
+        "E": "Local variables are stored in heap.",
+        "F": "Local variables are shared by all threads.",
+        "G": "Local variables can be private."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Java requires local variables to be definitely assigned before they are read.",
+      "multi": false
+    },
+    {
+      "topic": "Assessment Test",
+      "question_number": 2,
+      "question": "Select all valid statements about String in Java.",
+      "options": {
+        "A": "String is mutable.",
+        "B": "String implements CharSequence.",
+        "C": "String objects are immutable.",
+        "D": "StringBuilder is immutable.",
+        "E": "String literals may be interned.",
+        "F": "String cannot be compared using equals().",
+        "G": "String is a primitive type."
+      },
+      "correct_answers": ["B", "C", "E"],
+      "explanation": "String implements CharSequence, is immutable, and literals can be interned in the string pool.",
+      "multi": true
+    },
+    {
+      "topic": "OOP",
+      "question_number": 3,
+      "question": "Which keyword is used to prevent method overriding?",
+      "options": {
+        "A": "const",
+        "B": "static",
+        "C": "final",
+        "D": "sealed",
+        "E": "private",
+        "F": "volatile",
+        "G": "native"
+      },
+      "correct_answers": ["C"],
+      "explanation": "A final method cannot be overridden in subclasses.",
+      "multi": false
+    },
+    {
+      "topic": "Collections",
+      "question_number": 4,
+      "question": "Which interfaces are part of Java Collection Framework root contracts?",
+      "options": {
+        "A": "List",
+        "B": "Map",
+        "C": "Collection",
+        "D": "Stream",
+        "E": "Set",
+        "F": "Queue",
+        "G": "Path"
+      },
+      "correct_answers": ["A", "B", "C", "E", "F"],
+      "explanation": "List, Set, Queue extend Collection; Map is part of framework but separate from Collection hierarchy.",
+      "multi": true
+    },
+    {
+      "topic": "Streams",
+      "question_number": 5,
+      "question": "What does stream.map() do?",
+      "options": {
+        "A": "Filters elements based on a predicate.",
+        "B": "Transforms each element into another value.",
+        "C": "Sorts elements in descending order by default.",
+        "D": "Collects stream into a list automatically.",
+        "E": "Executes terminal operation.",
+        "F": "Consumes stream immediately.",
+        "G": "Removes null values only."
+      },
+      "correct_answers": ["B"],
+      "explanation": "map is an intermediate operation that transforms each element.",
+      "multi": false
+    }
+  ]
+}

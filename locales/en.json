@@ -1,0 +1,77 @@
+{
+  "app": {
+    "title": "Oracle Java Exam Prep",
+    "subtitle": "Practice platform for OCA/OCP/OCM"
+  },
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "history": "History",
+    "pricing": "Upgrade",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "common": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "locked": "Locked",
+    "unlocked": "Unlocked",
+    "minutes": "minutes",
+    "question": "Question"
+  },
+  "home": {
+    "headline": "Smart preparation, exam-like mock tests",
+    "description": "Train by certification track with timed mock exams and detailed analytics.",
+    "ctaPrimary": "Browse courses",
+    "ctaSecondary": "View premium plans"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Display name",
+    "loginTitle": "Login",
+    "registerTitle": "Create account",
+    "noAccount": "No account yet?",
+    "hasAccount": "Already have an account?"
+  },
+  "course": {
+    "practice": "Practice",
+    "mock": "Mock Exam",
+    "lessons": "Lessons",
+    "topics": "Topics",
+    "unlock": "Unlock course",
+    "freeAttemptInfo": "Free users can take 2 mock attempts per course"
+  },
+  "practice": {
+    "title": "Practice mode",
+    "hint": "Answer and submit each question to see explanation instantly"
+  },
+  "mock": {
+    "title": "Mock Exam",
+    "requireLogin": "You must login before taking a mock exam",
+    "blocked": "Your free mock attempts are used up for this course. Upgrade to continue.",
+    "submitConfirm": "Are you sure you want to submit?"
+  },
+  "result": {
+    "title": "Exam Result",
+    "score": "Score",
+    "passed": "Passed",
+    "failed": "Failed",
+    "detailLocked": "Detailed explanations are locked. Upgrade to unlock."
+  },
+  "pricing": {
+    "title": "Upgrade to premium",
+    "full": "Full-access plan",
+    "perCourse": "Per-course plan",
+    "buyNow": "Buy now",
+    "benefits": "Unlimited mocks, exam history, and full explanations"
+  },
+  "history": {
+    "title": "Exam history",
+    "locked": "Your history is saved but visible only after purchase"
+  }
+}
