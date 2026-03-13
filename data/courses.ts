@@ -2,18 +2,18 @@ import type { CourseDefinition } from '~~/types/course'
 
 export const COURSE_CATALOG: CourseDefinition[] = [
   {
-    id: 'oca-ocp-11',
-    code: 'OCA/OCP 11',
+    id: 'oca-8',
+    code: 'OCA 8',
     title: {
-      vi: 'Luyen thi OCA/OCP Java 11',
-      en: 'OCA/OCP Java 11 Prep'
+      vi: 'Luyen thi OCA Java 8',
+      en: 'OCA Java 8 Prep'
     },
     shortDescription: {
-      vi: 'Nen tang Java core, OOP, collections va stream API.',
-      en: 'Core Java foundations, OOP, collections, and stream API.'
+      vi: 'Nen tang Java core, syntax, OOP co ban cho Java SE 8.',
+      en: 'Core Java 8 syntax and OOP fundamentals.'
     },
     examMinutes: 90,
-    passThreshold: 68,
+    passThreshold: 67,
     topics: [
       {
         id: 'assessment-test',
@@ -24,11 +24,43 @@ export const COURSE_CATALOG: CourseDefinition[] = [
         ]
       },
       {
-        id: 'oop',
-        title: { vi: 'Lap trinh huong doi tuong', en: 'Object-Oriented Programming' },
+        id: 'java-core',
+        title: { vi: 'Java core va OOP', en: 'Java Core and OOP' },
         lessons: [
-          { vi: 'Inheritance', en: 'Inheritance' },
-          { vi: 'Polymorphism', en: 'Polymorphism' }
+          { vi: 'Methods and encapsulation', en: 'Methods and encapsulation' },
+          { vi: 'Class design', en: 'Class design' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'ocp-11',
+    code: 'OCP 11',
+    title: {
+      vi: 'Luyen thi OCP Java 11',
+      en: 'OCP Java 11 Prep'
+    },
+    shortDescription: {
+      vi: 'Nang cao Java 11: modules, API va class design.',
+      en: 'Advanced Java 11 topics: modules, APIs, and class design.'
+    },
+    examMinutes: 90,
+    passThreshold: 68,
+    topics: [
+      {
+        id: 'assessment-test',
+        title: { vi: 'Danh gia dau vao', en: 'Assessment Test' },
+        lessons: [
+          { vi: 'Language features', en: 'Language features' },
+          { vi: 'Core APIs', en: 'Core APIs' }
+        ]
+      },
+      {
+        id: 'advanced-java-11',
+        title: { vi: 'Java 11 nang cao', en: 'Advanced Java 11' },
+        lessons: [
+          { vi: 'Lambdas and functional interfaces', en: 'Lambdas and functional interfaces' },
+          { vi: 'Modules and exceptions', en: 'Modules and exceptions' }
         ]
       }
     ]

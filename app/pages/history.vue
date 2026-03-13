@@ -5,7 +5,7 @@
       <p v-if="state.locked" class="mt-2 text-sm text-slate-600">{{ t('history.locked') }}</p>
       <UnlockBanner
         v-if="state.locked"
-        course-id="oca-ocp-11"
+        course-id="oca-8"
         :message="t('history.locked')"
         :label="t('nav.pricing')"
       />

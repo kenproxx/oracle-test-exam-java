@@ -1,0 +1,6 @@
+declare module 'prismjs/components/prism-clike'
+declare module 'prismjs/components/prism-java'
+declare module 'prismjs/components/prism-json'
+declare module 'prismjs/components/prism-sql'
+declare module 'prismjs/components/prism-markup'
+declare module 'prismjs/components/prism-bash'

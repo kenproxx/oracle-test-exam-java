@@ -1,6 +1,7 @@
 export type ExamMode = 'practice' | 'mock'
 
 export type ExamQuestionState = {
+  questionIndex: number
   questionNumber: number
   selectedAnswers: string[]
 }

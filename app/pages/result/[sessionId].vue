@@ -13,15 +13,16 @@
       <h2 class="text-lg font-bold text-slate-900">Details</h2>
       <div v-if="result.details.length > 0" class="mt-3 space-y-3">
         <article
-          v-for="item in result.details"
-          :key="item.questionNumber"
+          v-for="(item, itemIndex) in result.details"
+          :key="`${item.questionNumber}-${itemIndex}`"
           class="rounded-xl border border-slate-200 p-3"
           :class="item.isCorrect ? 'bg-emerald-50/70' : 'bg-rose-50/70'"
         >
-          <p class="font-semibold text-slate-900">Q{{ item.questionNumber }}. {{ item.question }}</p>
+          <p class="font-semibold text-slate-900">Q{{ item.questionNumber }}.</p>
+          <RichTextBlock class="mt-1 text-slate-900" :text="item.question" />
           <p class="mt-1 text-sm text-slate-700">Selected: {{ item.selectedAnswers.join(', ') || '-' }}</p>
           <p class="text-sm text-slate-700">Correct: {{ item.correctAnswers.join(', ') || '-' }}</p>
-          <p class="mt-2 text-sm text-slate-600">{{ item.explanation }}</p>
+          <RichTextBlock class="mt-2 text-sm text-slate-600" :text="item.explanation" />
         </article>
       </div>
       <p v-else class="mt-2 text-sm text-slate-500">No detail available.</p>

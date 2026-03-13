@@ -10,6 +10,7 @@ const submissionSchema = z.object({
   courseId: z.string().min(1),
   answers: z.array(
     z.object({
+      questionIndex: z.number().int().nonnegative().optional(),
       questionNumber: z.number(),
       selectedAnswers: z.array(z.string())
     })
@@ -32,10 +33,14 @@ export default defineEventHandler(async (event) => {
   }
 
   const questionSet = await loadQuestions(payload.courseId)
-  const answerMap = new Map(payload.answers.map((item) => [item.questionNumber, item.selectedAnswers]))
+  const answersByIndex = new Map<number, string[]>()
+  payload.answers.forEach((item, index) => {
+    const key = item.questionIndex ?? index
+    answersByIndex.set(key, item.selectedAnswers)
+  })
 
-  const details = questionSet.questions.map((question) => {
-    const selectedAnswers = answerMap.get(question.question_number) || []
+  const details = questionSet.questions.map((question, index) => {
+    const selectedAnswers = answersByIndex.get(index) || []
     const expected = normalize(question.correct_answers)
     const selected = normalize(selectedAnswers)
     const isCorrect = expected.length === selected.length && expected.every((item, index) => item === selected[index])

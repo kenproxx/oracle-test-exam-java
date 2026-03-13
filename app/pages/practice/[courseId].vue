@@ -8,11 +8,12 @@
 
     <div class="card">
       <p class="text-sm font-semibold text-brand-700">{{ t('common.question') }} {{ examStore.currentIndex + 1 }}/{{ examStore.totalQuestions }}</p>
-      <h2 class="mt-2 text-lg font-bold text-slate-900">{{ currentQuestion.question }}</h2>
+      <RichTextBlock class="mt-2 text-lg font-semibold text-slate-900" :text="currentQuestion.question" />
 
       <QuestionOptions
+        :key="`practice-${examStore.currentIndex}`"
         class="mt-4"
-        :name="currentQuestion.question_number"
+        :name="`practice-${examStore.currentIndex}`"
         :options="currentQuestion.options"
         :multi="currentQuestion.multi"
         v-model="selectedAnswers"
@@ -30,7 +31,7 @@
         <p class="mt-1 text-sm text-slate-700">
           Correct answer: <strong>{{ evaluation.correctAnswers.join(', ') }}</strong>
         </p>
-        <p class="mt-2 text-sm text-slate-700">{{ evaluation.explanation }}</p>
+        <RichTextBlock class="mt-2 text-sm text-slate-700" :text="evaluation.explanation" />
       </div>
     </div>
   </section>
@@ -66,13 +67,13 @@ const selectedAnswers = computed<string[]>({
     if (!currentQuestion.value) {
       return []
     }
-    return examStore.selectedFor(currentQuestion.value.question_number)
+    return examStore.selectedFor(examStore.currentIndex)
   },
   set(value) {
     if (!currentQuestion.value) {
       return
     }
-    examStore.selectAnswer(currentQuestion.value.question_number, value)
+    examStore.selectAnswer(examStore.currentIndex, value)
   }
 })
 
@@ -81,7 +82,7 @@ function submitCurrent() {
     return
   }
 
-  evaluation.value = examStore.evaluatePractice(currentQuestion.value.question_number)
+  evaluation.value = examStore.evaluatePractice(examStore.currentIndex)
   submitted.value = true
 }
 

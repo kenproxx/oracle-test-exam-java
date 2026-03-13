@@ -10,11 +10,12 @@
 
     <div class="card">
       <p class="text-sm font-semibold text-brand-700">{{ t('common.question') }} {{ examStore.currentIndex + 1 }}/{{ examStore.totalQuestions }}</p>
-      <h2 class="mt-2 text-lg font-bold text-slate-900">{{ currentQuestion.question }}</h2>
+      <RichTextBlock class="mt-2 text-lg font-semibold text-slate-900" :text="currentQuestion.question" />
 
       <QuestionOptions
+        :key="`mock-${examStore.currentIndex}`"
         class="mt-4"
-        :name="currentQuestion.question_number"
+        :name="`mock-${examStore.currentIndex}`"
         :options="currentQuestion.options"
         :multi="currentQuestion.multi"
         v-model="selectedAnswers"
@@ -32,9 +33,9 @@
       <div class="flex flex-wrap gap-2">
         <button
           v-for="(question, index) in examStore.questions"
-          :key="question.question_number"
+          :key="`${question.question_number}-${index}`"
           class="h-9 w-9 rounded-lg border text-sm font-semibold"
-          :class="isAnswered(question.question_number) ? 'border-brand-600 bg-brand-50 text-brand-700' : 'border-slate-300 text-slate-500'"
+          :class="isAnswered(index) ? 'border-brand-600 bg-brand-50 text-brand-700' : 'border-slate-300 text-slate-500'"
           @click="examStore.setCurrentIndex(index)"
         >
           {{ index + 1 }}
@@ -93,18 +94,18 @@ const selectedAnswers = computed<string[]>({
     if (!currentQuestion.value) {
       return []
     }
-    return examStore.selectedFor(currentQuestion.value.question_number)
+    return examStore.selectedFor(examStore.currentIndex)
   },
   set(value) {
     if (!currentQuestion.value) {
       return
     }
-    examStore.selectAnswer(currentQuestion.value.question_number, value)
+    examStore.selectAnswer(examStore.currentIndex, value)
   }
 })
 
-function isAnswered(questionNumber: number) {
-  return examStore.selectedFor(questionNumber).length > 0
+function isAnswered(questionIndex: number) {
+  return examStore.selectedFor(questionIndex).length > 0
 }
 
 function goBack() {

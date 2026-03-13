@@ -56,21 +56,21 @@ export const useExamSessionStore = defineStore('exam-session', {
       this.currentIndex = index
     },
 
-    selectAnswer(questionNumber: number, selectedAnswers: string[]) {
-      this.answers[questionNumber] = [...selectedAnswers]
+    selectAnswer(questionIndex: number, selectedAnswers: string[]) {
+      this.answers[questionIndex] = [...selectedAnswers]
     },
 
-    selectedFor(questionNumber: number) {
-      return this.answers[questionNumber] || []
+    selectedFor(questionIndex: number) {
+      return this.answers[questionIndex] || []
     },
 
-    evaluatePractice(questionNumber: number) {
-      const question = this.questions.find((item) => item.question_number === questionNumber)
+    evaluatePractice(questionIndex: number) {
+      const question = this.questions[questionIndex]
       if (!question) {
         return { isCorrect: false, correctAnswers: [] as string[] }
       }
 
-      const selected = this.answers[questionNumber] || []
+      const selected = this.answers[questionIndex] || []
       const expected = [...question.correct_answers].sort()
       const actual = [...selected].sort()
       const isCorrect = expected.length === actual.length && expected.every((item, index) => item === actual[index])
@@ -84,9 +84,10 @@ export const useExamSessionStore = defineStore('exam-session', {
 
     buildSubmission(): MockExamSubmission {
       const spentSeconds = this.startedAt > 0 ? Math.max(Math.floor((Date.now() - this.startedAt) / 1000), 0) : 0
-      const answers = this.questions.map((question) => ({
+      const answers = this.questions.map((question, questionIndex) => ({
+        questionIndex,
         questionNumber: question.question_number,
-        selectedAnswers: this.selectedFor(question.question_number)
+        selectedAnswers: this.selectedFor(questionIndex)
       }))
 
       return {

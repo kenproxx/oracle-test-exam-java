@@ -23,7 +23,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 1,
-      "question": "Consider the following code snippet:\n```java\npublic class Main {\npublic static void main(String[] args) {\nStringBuilder sb1 = new StringBuilder(\"Java\");\nStringBuilder sb2 = new StringBuilder(\"Python\");\nsb1 = sb2;\n```\n// More code here\n```java\n}\n}\n```\nAfter the execution of the above code, which of the following statements is true regarding garbage\ncollection?",
+      "question": "Consider the following code snippet:\n```java\n1: public class Main {\n2: public static void main(String[] args) {\n3: StringBuilder sb1 = new StringBuilder(\"Java\");\n4: StringBuilder sb2 = new StringBuilder(\"Python\");\n5: sb1 = sb2;\n6: // More code here\n7: }\n8: }\n```\nAfter the execution of the above code, which of the following statements is true regarding garbage\ncollection?",
       "options": {
         "A": "Both sb1 and sb2 are eligible for garbage collection.",
         "B": "Only the StringBuilder object initially referenced by sb1 is eligible for garbage collection.",
@@ -73,7 +73,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 4,
-      "question": "Consider you have the following two Java files located in the same directory:\n// File 1: Calculator.java\n```java\npackage math;\npublic class Calculator {\npublic int add(int a, int b) {\nreturn a + b;\n}\n}\n```\n// File 2: Application.java\n```java\npackage app;\nimport math.Calculator;\npublic class Application {\npublic static void main(String[] args) {\n```\nCalculator calc = new Calculator();\nSystem.out.println(calc.add(5, 3));\n```java\n}\n}\n```\nWhich of the following statements is true regarding the package and import statements in Java?",
+      "question": "Consider you have the following two Java files located in the same directory:\n// File 1: Calculator.java\n```java\n1: package math;\n2: public class Calculator {\n3: public int add(int a, int b) {\n4: return a + b;\n5: }\n6: }\n```\n// File 2: Application.java\n```java\n1: package app;\n2: import math.Calculator;\n3: public class Application {\n4: public static void main(String[] args) {\n5: Calculator calc = new Calculator();\n6: System.out.println(calc.add(5, 3));\n7: }\n8: }\n```\nWhich of the following statements is true regarding the package and import statements in Java?",
       "options": {
         "A": "The import statement in Application.java is unnecessary because both classes are in the same directory.",
         "B": "The import statement in Application.java is necessary for using the Calculator class because they belong to different packages.",
@@ -90,7 +90,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 5,
-      "question": "Consider the default access levels provided by Java's four access modifiers: public,\n```java\nprotected, default (no modifier), and private. Which of the following statements correctly\n```\ndescribe the access levels granted by these modifiers? (Choose all that apply.)",
+      "question": "Consider the default access levels provided by Java's four access modifiers: public,\n```java\n1: protected, default (no modifier), and private. Which of the following statements correctly\n```\ndescribe the access levels granted by these modifiers? (Choose all that apply.)",
       "options": {
         "A": "A public class or member can be accessed by any other class in the same package or in any other package.",
         "B": "A protected member can be accessed by any class in its own package, but from outside the package, only by classes that extend the class containing the protected member.",
@@ -111,11 +111,11 @@
       "question_number": 6,
       "question": "Which of the following class declarations correctly demonstrates the use of access modifiers,\nclass keyword, and class naming conventions in Java?",
       "options": {
-        "A": "```java\nclass public Vehicle { }\n```",
-        "B": "```java\npublic class vehicle { }\n```",
+        "A": "```java\n1: class public Vehicle { }\n```",
+        "B": "```java\n1: public class vehicle { }\n```",
         "C": "Public class Vehicle { }",
-        "D": "```java\npublic class Vehicle { }\n```",
-        "E": "```java\nclassVehicle public { }\n```"
+        "D": "```java\n1: public class Vehicle { }\n```",
+        "E": "```java\n1: classVehicle public { }\n```"
       },
       "correct_answers": [
         "D"
@@ -126,7 +126,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 7,
-      "question": "Consider the following code snippet:\n```java\npublic class Counter {\npublic static int COUNT = 0;\npublic Counter() {\n```\nCOUNT++;\n```java\n}\npublic static void resetCount() {\n```\nCOUNT = 0;\n```java\n}\npublic int getCount() {\nreturn COUNT;\n}\n}\n```\nWhich of the following statements are true about static and instance members within the Counter\n```java\nclass? (Choose all that apply.)\n```",
+      "question": "Consider the following code snippet:\n```java\n 1: public class Counter {\n 2: public static int COUNT = 0;\n 3: public Counter() {\n 4: COUNT++;\n 5: }\n 6: public static void resetCount() {\n 7: COUNT = 0;\n 8: }\n 9: public int getCount() {\n10: return COUNT;\n11: }\n12: }\n```\nWhich of the following statements are true about static and instance members within the Counter class? (Choose all that apply.)",
       "options": {
         "A": "The COUNT variable can be accessed directly using the class name without creating an instance of Counter.",
         "B": "The getCount() method is an example of a static method because it returns the value of a static variable.",
@@ -146,11 +146,11 @@
       "question_number": 8,
       "question": "Which of the following are valid field name identifiers in Java? (Choose all that apply.)",
       "options": {
-        "A": "```java\nint _age;\n```",
-        "B": "```java\ndouble 2ndValue;\n```",
-        "C": "```java\nboolean is_valid;\n```",
+        "A": "```java\n1: int _age;\n```",
+        "B": "```java\n1: double 2ndValue;\n```",
+        "C": "```java\n1: boolean is_valid;\n```",
         "D": "String $name;",
-        "E": "```java\nchar #char;\n```"
+        "E": "```java\n1: char #char;\n```"
       },
       "correct_answers": [
         "A",
@@ -165,10 +165,10 @@
       "question_number": 9,
       "question": "Consider the syntax used to declare methods in a class. Which of the following method\ndeclarations is correct according to Java syntax rules?",
       "options": {
-        "A": "```java\nint public static final computeSum(int num1, int num2) { return num1 + num2 }\n```",
+        "A": "```java\n1: int public static final computeSum(int num1, int num2) { return num1 + num2 }\n```",
         "B": "private void updateRecord(int id) throws IOException {}",
         "C": "synchronized boolean checkStatus [int status] { return status == 1; }",
-        "D": "```java\nfloat calculateArea() {}\n```"
+        "D": "```java\n1: float calculateArea() {}\n```"
       },
       "correct_answers": [
         "B"
@@ -181,11 +181,11 @@
       "question_number": 10,
       "question": "Given the method declarations below, which of them have the same method signature?",
       "options": {
-        "A": "```java\npublic void update(int id, String value)\n```",
-        "B": "```java\nprivate void update(int identifier,\n```\nString data)",
-        "C": "```java\npublic boolean update(String value, int id)\n```",
-        "D": "```java\nvoid update(String\n```\nvalue, int id)",
-        "E": "```java\nprotected void update(int id, int value) throws IOException\n```"
+        "A": "```java\n1: public void update(int id, String value)\n```",
+        "B": "```java\n1: private void update(int identifier,\n```\nString data)",
+        "C": "```java\n1: public boolean update(String value, int id)\n```",
+        "D": "```java\n1: void update(String\n```\nvalue, int id)",
+        "E": "```java\n1: protected void update(int id, int value) throws IOException\n```"
       },
       "correct_answers": [
         "A",
@@ -199,7 +199,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 11,
-      "question": "Given this class:\n```java\npublic class AccountManager {\nprivate void resetAccountPassword(String accountId) {\n```\n// Implementation code here\n```java\n}\nvoid auditTrail(String accountId) {\n```\n// Implementation code here\n```java\n}\nprotected void notifyAccountChanges(String accountId) {\n```\n// Implementation code here\n```java\n}\npublic void updateAccountInformation(String accountId) {\n```\n// Implementation code here\n```java\n}\n}\n```\nWhich of the following statements correctly describe the accessibility of the methods within the\nAccountManager class from a class in the same package and from a class in a different package?",
+      "question": "Given this class:\n```java\n 1: public class AccountManager {\n 2: private void resetAccountPassword(String accountId) {\n 3: // Implementation code here\n 4: }\n 5: void auditTrail(String accountId) {\n 6: // Implementation code here\n 7: }\n 8: protected void notifyAccountChanges(String accountId) {\n 9: // Implementation code here\n10: }\n11: public void updateAccountInformation(String accountId) {\n12: // Implementation code here\n13: }\n14: }\n```\nWhich of the following statements correctly describe the accessibility of the methods within the\nAccountManager class from a class in the same package and from a class in a different package?",
       "options": {
         "A": "The resetAccountPassword method can be accessed from any class within the same package but not from a class in a different package.",
         "B": "The auditTrail method can be accessed from any class within the same package and from subclasses in different packages.",
@@ -216,7 +216,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 12,
-      "question": "What will be the output of this program?\n```java\npublic class TestPassByValue {\npublic static void main(String[] args) {\nint originalValue = 10;\n```\nTestPassByValue test = new TestPassByValue();\nSystem.out.println(\"Before calling changeValue: \" + originalValue);\ntest.changeValue(originalValue);\nSystem.out.println(\"After calling changeValue: \" + originalValue);\n```java\n}\npublic void changeValue(int value) {\nvalue = 20;\n}\n}\n```",
+      "question": "What will be the output of this program?\n```java\n 1: public class TestPassByValue {\n 2: public static void main(String[] args) {\n 3: int originalValue = 10;\n 4: TestPassByValue test = new TestPassByValue();\n 5: System.out.println(\"Before calling changeValue: \" + originalValue);\n 6: test.changeValue(originalValue);\n 7: System.out.println(\"After calling changeValue: \" + originalValue);\n 8: }\n 9: public void changeValue(int value) {\n10: value = 20;\n11: }\n12: }\n```",
       "options": {
         "A": "Before calling changeValue: 10 After calling changeValue: 20",
         "B": "Before calling changeValue: 10 After calling changeValue: 10",
@@ -232,7 +232,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 13,
-      "question": "What will be the output of the following program?\n```java\npublic class Test {\npublic static void main(String[] args) {\nprint(null);\n}\npublic static void print(Object o) {\n```\nSystem.out.println(\"Object\");\n```java\n}\npublic static void print(String s) {\n```\nSystem.out.println(\"String\");\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class Test {\n 2: public static void main(String[] args) {\n 3: print(null);\n 4: }\n 5: public static void print(Object o) {\n 6: System.out.println(\"Object\");\n 7: }\n 8: public static void print(String s) {\n 9: System.out.println(\"String\");\n10: }\n11: }\n```",
       "options": {
         "A": "Object",
         "B": "String",
@@ -250,8 +250,8 @@
       "question_number": 14,
       "question": "Which of the following method declarations correctly uses varargs? Choose all that apply.",
       "options": {
-        "A": "```java\npublic void print(String... messages, int count)\n```",
-        "B": "```java\npublic void print(int count,\n```\nString...\nmessages)\nprint(String[]...",
+        "A": "```java\n1: public void print(String... messages, int count)\n```",
+        "B": "```java\n1: public void print(int count,\n```\nString...\nmessages)\nprint(String[]...",
         "C": "public messages)",
         "E": "void public print(String void messages...) print(String...",
         "D": "public messages, void String lastMessage)"
@@ -266,7 +266,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 15,
-      "question": "Given the class Vehicle:\n```java\npublic class Vehicle {\nprivate String type;\nprivate int maxSpeed;\npublic Vehicle(String type) {\n```\nthis.type = type;\n```java\n}\npublic Vehicle(int maxSpeed) {\n```\nthis.maxSpeed = maxSpeed;\n```java\n}\n```\n// Additional methods here\n```java\n}\n```\nWhich of the following statements is true regarding its constructors?",
+      "question": "Given the class Vehicle:\n```java\n 1: public class Vehicle {\n 2: private String type;\n 3: private int maxSpeed;\n 4: public Vehicle(String type) {\n 5: this.type = type;\n 6: }\n 7: public Vehicle(int maxSpeed) {\n 8: this.maxSpeed = maxSpeed;\n 9: }\n10: // Additional methods here\n11: }\n```\nWhich of the following statements is true regarding its constructors?",
       "options": {
         "A": "The class Vehicle demonstrates constructor overloading by having multiple constructors with different parameter lists.",
         "B": "The class Vehicle will compile with an error because it does not provide a default constructor.",
@@ -282,7 +282,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 16,
-      "question": "Consider the following class with an instance initializer block:\n```java\npublic class Library {\nprivate int bookCount;\nprivate List<String> books;\n{\nbooks = new ArrayList<>();\n```\nbooks.add(\"Book 1\");\nbooks.add(\"Book 2\");\n// Instance initializer block\n```java\n}\npublic Library(int bookCount) {\n```\nthis.bookCount = bookCount + books.size();\n```java\n}\npublic int getBookCount() {\nreturn bookCount;\n}\n```\n// Additional methods here\n```java\n}\n```\nGiven the Library class above, which of the following statements accurately describe the role and\neffect of the instance initializer block?",
+      "question": "Consider the following class with an instance initializer block:\n```java\n 1: public class Library {\n 2: private int bookCount;\n 3: private List<String> books;\n 4: {\n 5: books = new ArrayList<>();\n 6: books.add(\"Book 1\");\n 7: books.add(\"Book 2\");\n 8: // Instance initializer block\n 9: }\n10: public Library(int bookCount) {\n11: this.bookCount = bookCount + books.size();\n12: }\n13: public int getBookCount() {\n14: return bookCount;\n15: }\n16: // Additional methods here\n17: }\n```\nGiven the Library class above, which of the following statements accurately describe the role and\neffect of the instance initializer block?",
       "options": {
         "A": "The instance initializer block is executed before the constructor, initializing the books list and adding two books to it.",
         "B": "The instance initializer block replaces the need for a constructor in the Library class.",
@@ -299,7 +299,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 17,
-      "question": "Consider the following Java class with a static initializer block:\n```java\npublic class Configuration {\nprivate static Map<String, String> settings;\nstatic {\nsettings = new HashMap<>();\n```\nsettings.put(\"url\", \"https://eherrera.net\");\nsettings.put(\"timeout\", \"30\");\n// Static initializer block\n```java\n}\npublic static String getSetting(String key) {\nreturn settings.get(key);\n}\n```\n// Additional methods here\n```java\n}\n```\nGiven the Configuration class above, which of the following statements accurately describe the role\nand effect of the static initializer block?",
+      "question": "Consider the following Java class with a static initializer block:\n```java\n 1: public class Configuration {\n 2: private static Map<String, String> settings;\n 3: static {\n 4: settings = new HashMap<>();\n 5: settings.put(\"url\", \"https://eherrera.net\");\n 6: settings.put(\"timeout\", \"30\");\n 7: // Static initializer block\n 8: }\n 9: public static String getSetting(String key) {\n10: return settings.get(key);\n11: }\n12: // Additional methods here\n13: }\n```\nGiven the Configuration class above, which of the following statements accurately describe the role\nand effect of the static initializer block?",
       "options": {
         "A": "The static initializer block is executed only once when the class is first loaded into memory, initializing the settings map with default values.",
         "B": "The static initializer block allows instance methods to modify the settings map without creating an instance of the Configuration class.",
@@ -315,7 +315,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 19,
-      "question": "Consider a class CustomObject that does not explicitly override any methods from\njava.lang.Object:\n```java\npublic class CustomObject {\n```\n// Class implementation goes here\n```java\n}\n```\nWhich\nof\nthe\nfollowing\nstatements\ncorrectly\nreflect\nthe\noutcomes\nwhen\nmethods\nfrom\njava.lang.Object are used with instances of CustomObject? (Choose all that apply.)",
+      "question": "Consider a class CustomObject that does not explicitly override any methods from\njava.lang.Object:\n```java\n1: public class CustomObject {\n2: // Class implementation goes here\n3: }\n```\nWhich\nof\nthe\nfollowing\nstatements\ncorrectly\nreflect\nthe\noutcomes\nwhen\nmethods\nfrom\njava.lang.Object are used with instances of CustomObject? (Choose all that apply.)",
       "options": {
         "A": "Invoking toString() on an instance of CustomObject will return a String that includes the class name followed by the @ symbol and the object's hashcode.",
         "B": "Calling equals(Object obj) on two different instances of CustomObject that have identical content will return true because they are instances of the same class.",
@@ -332,7 +332,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 20,
-      "question": "Consider the code snippet below that demonstrates the use of a static nested class:\n```java\npublic class OuterClass {\nprivate static String message = \"Hello, World!\";\nstatic class NestedClass {\nvoid printMessage() {\n```\n// Note: A static nested class can access the static members of its outer class.\nSystem.out.println(message);\n```java\n}\n}\npublic static void main(String[] args) {\n```\nOuterClass.NestedClass nested = new OuterClass.NestedClass();\nnested.printMessage();\n```java\n}\n}\n```\nWhich of the following statements is true regarding static nested classes in Java?",
+      "question": "Consider the code snippet below that demonstrates the use of a static nested class:\n```java\n 1: public class OuterClass {\n 2: private static String message = \"Hello, World!\";\n 3: static class NestedClass {\n 4: void printMessage() {\n 5: // Note: A static nested class can access the static members of its outer class.\n 6: System.out.println(message);\n 7: }\n 8: }\n 9: public static void main(String[] args) {\n10: OuterClass.NestedClass nested = new OuterClass.NestedClass();\n11: nested.printMessage();\n12: }\n13: }\n```\nWhich of the following statements is true regarding static nested classes in Java?",
       "options": {
         "A": "A static nested class can access both static and non-static members of its enclosing class directly.",
         "B": "Instances of a static nested class can exist without an instance of its enclosing class.",
@@ -348,7 +348,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 21,
-      "question": "Consider the following code snippet that demonstrates the use of a non-static nested (inner)\nclass:\n```java\npublic class OuterClass {\nprivate String message = \"Hello, World!\";\nclass InnerClass {\nvoid printMessage() {\n```\nSystem.out.println(message);\n```java\n}\n}\npublic static void main(String[] args) {\n```\nOuterClass outer = new OuterClass();\nOuterClass.InnerClass inner = outer.new InnerClass();\ninner.printMessage();\n```java\n}\n}\n```\nWhich of the following statements is true regarding non-static nested (inner) classes in Java?",
+      "question": "Consider the following code snippet that demonstrates the use of a non-static nested (inner)\nclass:\n```java\n 1: public class OuterClass {\n 2: private String message = \"Hello, World!\";\n 3: class InnerClass {\n 4: void printMessage() {\n 5: System.out.println(message);\n 6: }\n 7: }\n 8: public static void main(String[] args) {\n 9: OuterClass outer = new OuterClass();\n10: OuterClass.InnerClass inner = outer.new InnerClass();\n11: inner.printMessage();\n12: }\n13: }\n```\nWhich of the following statements is true regarding non-static nested (inner) classes in Java?",
       "options": {
         "A": "A non-static nested class can directly access both static and non-static members of its enclosing class.",
         "B": "Instances of a non-static nested class can exist independently of an instance of its enclosing class.",
@@ -364,7 +364,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 22,
-      "question": "Consider the following code snippet demonstrating the use of a local class within a method:\n```java\npublic class LocalClassExample {\npublic void printEvenNumbers(int[] numbers, int max) {\nclass EvenNumberPrinter {\npublic void print() {\nfor (int number : numbers) {\nif (number % 2 == 0 && number <= max) {\n```\nSystem.out.println(number);\n```java\n}\n}\n}\n}\n```\nEvenNumberPrinter printer = new EvenNumberPrinter();\nprinter.print();\n```java\n}\npublic static void main(String[] args) {\n```\nLocalClassExample example = new LocalClassExample();\n```java\nint[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n```\nexample.printEvenNumbers(numbers, 6);\n```java\n}\n}\n```\nWhich of the following statements correctly describe local classes in Java, based on the example\nprovided?",
+      "question": "Consider the following code snippet demonstrating the use of a local class within a method:\n```java\n 1: public class LocalClassExample {\n 2: public void printEvenNumbers(int[] numbers, int max) {\n 3: class EvenNumberPrinter {\n 4: public void print() {\n 5: for (int number : numbers) {\n 6: if (number % 2 == 0 && number <= max) {\n 7: System.out.println(number);\n 8: }\n 9: }\n10: }\n11: }\n12: EvenNumberPrinter printer = new EvenNumberPrinter();\n13: printer.print();\n14: }\n15: public static void main(String[] args) {\n16: LocalClassExample example = new LocalClassExample();\n17: int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n18: example.printEvenNumbers(numbers, 6);\n19: }\n20: }\n```\nWhich of the following statements correctly describe local classes in Java, based on the example\nprovided?",
       "options": {
         "A": "Local classes can be declared within any block that precedes a statement.",
         "B": "Instances of a local class can be created and used outside of the block where the local class is defined.",
@@ -381,7 +381,7 @@
     {
       "topic": "Chapter 1: Utilizing Java OO Approach - Part 1",
       "question_number": 23,
-      "question": "Consider the following Java code snippet demonstrating the use of an anonymous class:\n```java\npublic class HelloWorld {\ninterface HelloWorldInterface {\nvoid greet();\n}\npublic void sayHello() {\n```\nHelloWorldInterface myGreeting = new HelloWorldInterface() {\n@Override\n```java\npublic void greet() {\n```\nSystem.out.println(\"Hello, world!\");\n```java\n}\n```\n};\nmyGreeting.greet();\n```java\n}\npublic static void main(String[] args) {\nnew HelloWorld().sayHello();\n}\n}\n```\nWhich of the following statements is true about anonymous classes in Java?",
+      "question": "Consider the following Java code snippet demonstrating the use of an anonymous class:\n```java\n 1: public class HelloWorld {\n 2: interface HelloWorldInterface {\n 3: void greet();\n 4: }\n 5: public void sayHello() {\n 6: HelloWorldInterface myGreeting = new HelloWorldInterface() {\n 7: @Override\n 8: public void greet() {\n 9: System.out.println(\"Hello, world!\");\n10: }\n11: };\n12: myGreeting.greet();\n13: }\n14: public static void main(String[] args) {\n15: new HelloWorld().sayHello();\n16: }\n17: }\n```\nWhich of the following statements is true about anonymous classes in Java?",
       "options": {
         "A": "Anonymous classes can implement interfaces and extend classes without the need to declare a named class.",
         "B": "An anonymous class must override all methods in the superclass or interface it declares it is implementing or extending.",
@@ -413,7 +413,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 1,
-      "question": "What is the result of compiling and executing the following code?\n```java\nvoid myMethod() {\nint x = 1;\nif (x > 0) {\nint y = 2;\n```\nSystem.out.println(x + y);\n```java\n}\n```\nSystem.out.println(x);\nSystem.out.println(y);\n```java\n}\n```",
+      "question": "What is the result of compiling and executing the following code?\n```java\n1: void myMethod() {\n2: int x = 1;\n3: if (x > 0) {\n4: int y = 2;\n5: System.out.println(x + y);\n6: }\n7: System.out.println(x);\n8: System.out.println(y);\n9: }\n```",
       "options": {
         "A": "The code compiles and outputs 3 followed by 1.",
         "B": "The code compiles and outputs 3 followed by 1 and an undefined value for y.",
@@ -431,10 +431,10 @@
       "question_number": 2,
       "question": "Which of the following variable declarations statements are valid? (Choose all that apply.)",
       "options": {
-        "A": "```java\ndouble x, double y;\n```",
-        "B": "```java\nint i = 0, String s = \"hello\";\n```",
+        "A": "```java\n1: double x, double y;\n```",
+        "B": "```java\n1: int i = 0, String s = \"hello\";\n```",
         "C": "float f1 = 3.14f, f2 = 6.28f;",
-        "D": "```java\nchar a = 'A', b, c = 'C';\n```"
+        "D": "```java\n1: char a = 'A', b, c = 'C';\n```"
       },
       "correct_answers": [
         "C",
@@ -452,7 +452,7 @@
         "B": "The use of var is restricted to local variables within methods, constructors, or initializer blocks.",
         "C": "var can be used to declare method parameters.",
         "D": "var enhances readability by inferring types where it's clear from the context, but it's not allowed in method signatures to maintain clarity.",
-        "E": "```java\nvar can be used to declare class (static) variables.\n```"
+        "E": "```java\n1: var can be used to declare class (static) variables.\n```"
       },
       "correct_answers": [
         "B",
@@ -481,7 +481,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 5,
-      "question": "Consider the following code snippet:\n```java\nabstract class Animal {\nabstract void eat();\n}\nclass Dog extends Animal {\nvoid eat() {\n```\nSystem.out.println(\"Dog eats\");\n```java\n}\n}\nclass Cat extends Animal {\nvoid eat() {\n```\nSystem.out.println(\"Cat eats\");\n```java\n}\n}\npublic class Test {\npublic static void main(String[] args) {\n```\nAnimal myAnimal = new Dog();\nmyAnimal.eat();\n```java\n}\n}\n```\nWhich of the following statements is true regarding the above code? Choose all that apply.",
+      "question": "Consider the following code snippet:\n```java\n 1: abstract class Animal {\n 2: abstract void eat();\n 3: }\n 4: class Dog extends Animal {\n 5: void eat() {\n 6: System.out.println(\"Dog eats\");\n 7: }\n 8: }\n 9: class Cat extends Animal {\n10: void eat() {\n11: System.out.println(\"Cat eats\");\n12: }\n13: }\n14: public class Test {\n15: public static void main(String[] args) {\n16: Animal myAnimal = new Dog();\n17: myAnimal.eat();\n18: }\n19: }\n```\nWhich of the following statements is true regarding the above code? Choose all that apply.",
       "options": {
         "A": "The code will compile and print \"Dog eats\" when executed.",
         "B": "The Animal class can be instantiated.",
@@ -498,7 +498,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 6,
-      "question": "Consider the following interfaces:\n```java\ninterface Walkable {\nint distance = 10;\nvoid walk();\n}\ninterface Runnable {\nvoid run();\n```\ndefault void getSpeed() {\nSystem.out.println(\"Default speed\");\n```java\n}\n}\nclass Person implements Walkable, Runnable {\npublic void walk() {\n```\nSystem.out.println(\"Walking...\");\n```java\n}\npublic void run() {\n```\nSystem.out.println(\"Running...\");\n```java\n}\n}\n```\nWhich of the following statements is true?",
+      "question": "Consider the following interfaces:\n```java\n 1: interface Walkable {\n 2: int distance = 10;\n 3: void walk();\n 4: }\n 5: interface Runnable {\n 6: void run();\n 7: default void getSpeed() {\n 8: System.out.println(\"Default speed\");\n 9: }\n10: }\n11: class Person implements Walkable, Runnable {\n12: public void walk() {\n13: System.out.println(\"Walking...\");\n14: }\n15: public void run() {\n16: System.out.println(\"Running...\");\n17: }\n18: }\n```\nWhich of the following statements is true?",
       "options": {
         "A": "The Person class must override the getSpeed method.",
         "B": "The distance variable in the Walkable interface is implicitly public, static, and final.",
@@ -515,7 +515,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 7,
-      "question": "Consider the following code snippet related to sealed classes:\nsealed abstract class Shape permits Circle, Square {\n```java\nabstract double area();\n}\nfinal class Circle extends Shape {\nprivate final double radius;\n```\nCircle(double radius) {\nthis.radius = radius;\n```java\n}\npublic double area() {\nreturn Math.PI * radius * radius;\n}\n}\n```\nnon-sealed class Square extends Shape {\n```java\nprivate final double side;\n```\nSquare(double side) {\nthis.side = side;\n```java\n}\npublic double area() {\nreturn side * side;\n}\n}\npublic class TestShapes {\npublic static void main(String[] args) {\n```\nShape shape = new Circle(10);\nSystem.out.println(\"Area: \" + shape.area());\n```java\n}\n}\n```\nWhich of the following statements is true?",
+      "question": "Consider the following code snippet related to sealed classes:\nsealed abstract class Shape permits Circle, Square {\n```java\n 1: abstract double area();\n 2: }\n 3: final class Circle extends Shape {\n 4: private final double radius;\n 5: Circle(double radius) {\n 6: this.radius = radius;\n 7: }\n 8: public double area() {\n 9: return Math.PI * radius * radius;\n10: }\n11: }\n12: non-sealed class Square extends Shape {\n13: private final double side;\n14: Square(double side) {\n15: this.side = side;\n16: }\n17: public double area() {\n18: return side * side;\n19: }\n20: }\n21: public class TestShapes {\n22: public static void main(String[] args) {\n23: Shape shape = new Circle(10);\n24: System.out.println(\"Area: \" + shape.area());\n25: }\n26: }\n```\nWhich of the following statements is true?",
       "options": {
         "A": "The Shape class is correctly defined as a sealed class, allowing only specified classes to extend it.",
         "B": "The Square class does not correctly extend the Shape class because it is not marked as final.",
@@ -531,7 +531,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 8,
-      "question": "Consider the following class:\n```java\npublic class Widget {\nprivate int size;\npublic Widget() {\n```\nthis(10); // Line 5\n```java\n}\npublic Widget(int size) {\n```\nthis.size = size;\n```java\n}\npublic void resize(int size) {\nif (size > this.size) {\n```\nthis.size = size; // Line 14\n```java\nupdateWidget();\n}\n}\nprivate void updateWidget() {\n```\nSystem.out.println(\"Widget updated to size \" + this.size);\n```java\n}\npublic static void main(String[] args) {\n```\nWidget widget = new Widget();\nwidget.resize(15);\n```java\n}\n}\n```\nIn line 114, what does the this keyword represent in the context of the Widget class?",
+      "question": "Consider the following class:\n```java\n 1: public class Widget {\n 2: private int size;\n 3: public Widget() {\n 4: this(10); // Line 5\n 5: }\n 6: public Widget(int size) {\n 7: this.size = size;\n 8: }\n 9: public void resize(int size) {\n10: if (size > this.size) {\n11: this.size = size; // Line 14\n12: updateWidget();\n13: }\n14: }\n15: private void updateWidget() {\n16: System.out.println(\"Widget updated to size \" + this.size);\n17: }\n18: public static void main(String[] args) {\n19: Widget widget = new Widget();\n20: widget.resize(15);\n21: }\n22: }\n```\nIn line 114, what does the this keyword represent in the context of the Widget class?",
       "options": {
         "A": "A reference to the static context of the class, allowing access to static methods and fields.",
         "B": "A special variable that stores the return value of a method.",
@@ -547,7 +547,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 9,
-      "question": "Consider the following classes:\n```java\nclass Animal {\n```\nString name;\nAnimal(String name) {\nthis.name = name;\n```java\n}\nprotected void eat() {\n```\nSystem.out.println(\"Animal eats\");\n```java\n}\n}\nclass Dog extends Animal {\n```\nDog(String name) {\n```java\nsuper(name);\n}\n```\n@Override\n```java\nprotected void eat() {\n```\nsuper.eat();\nSystem.out.println(name + \" (Dog) eats\");\n```java\n}\n}\npublic class TestAnimal {\npublic static void main(String[] args) {\n```\nAnimal myDog = new Dog(\"Buddy\");\nmyDog.eat();\n```java\n}\n}\n```\nWhich of the following statements are true regarding the use of super in the above code? (Choose all\nthat apply.)",
+      "question": "Consider the following classes:\n```java\n 1: class Animal {\n 2: String name;\n 3: Animal(String name) {\n 4: this.name = name;\n 5: }\n 6: protected void eat() {\n 7: System.out.println(\"Animal eats\");\n 8: }\n 9: }\n10: class Dog extends Animal {\n11: Dog(String name) {\n12: super(name);\n13: }\n14: @Override\n15: protected void eat() {\n16: super.eat();\n17: System.out.println(name + \" (Dog) eats\");\n18: }\n19: }\n20: public class TestAnimal {\n21: public static void main(String[] args) {\n22: Animal myDog = new Dog(\"Buddy\");\n23: myDog.eat();\n24: }\n25: }\n```\nWhich of the following statements are true regarding the use of super in the above code? (Choose all\nthat apply.)",
       "options": {
         "A": "The super keyword is used in the Dog constructor to call the superclass constructor.",
         "B": "The eat method in the Dog class uses super to invoke the superclass's eat method.",
@@ -564,7 +564,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 10,
-      "question": "Consider the following classes:\n```java\nclass Vehicle {\npublic void drive(int speed) {\n```\nSystem.out.println(\"Vehicle driving at speed: \" + speed);\n```java\n}\n}\nclass Car extends Vehicle {\n```\n@Override\n```java\npublic void drive(long speed) {\n```\nSystem.out.println(\"Car driving at speed: \" + speed);\n```java\n}\n}\npublic class TestDrive {\npublic static void main(String[] args) {\n```\nVehicle myCar = new Car();\nmyCar.drive(60);\n```java\n}\n}\n```\nWhat is the result of compiling and executing the above code?",
+      "question": "Consider the following classes:\n```java\n 1: class Vehicle {\n 2: public void drive(int speed) {\n 3: System.out.println(\"Vehicle driving at speed: \" + speed);\n 4: }\n 5: }\n 6: class Car extends Vehicle {\n 7: @Override\n 8: public void drive(long speed) {\n 9: System.out.println(\"Car driving at speed: \" + speed);\n10: }\n11: }\n12: public class TestDrive {\n13: public static void main(String[] args) {\n14: Vehicle myCar = new Car();\n15: myCar.drive(60);\n16: }\n17: }\n```\nWhat is the result of compiling and executing the above code?",
       "options": {
         "A": "It compiles and prints \"Car driving at speed: 60\".",
         "B": "It does not compile because the drive method cannot be called using a Vehicle reference.",
@@ -580,7 +580,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 11,
-      "question": "Consider the following code snippet:\n```java\nclass Fruit {\npublic void flavor() {\n```\nSystem.out.println(\"Fruit flavor\");\n```java\n}\n}\nclass Apple extends Fruit {\n```\n@Override\n```java\npublic void flavor() {\n```\nSystem.out.println(\"Apple flavor\");\n```java\n}\npublic void color() {\n```\nSystem.out.println(\"Red\");\n```java\n}\n}\npublic class TestFruit {\npublic static void main(String[] args) {\n```\nFruit myFruit = new Apple();\nmyFruit.flavor();\n```java\n// myFruit.color();\n}\n}\n```\nIf the commented line // myFruit.color(); is uncommented, what will be the result of compiling and\nexecuting the above code?",
+      "question": "Consider the following code snippet:\n```java\n 1: class Fruit {\n 2: public void flavor() {\n 3: System.out.println(\"Fruit flavor\");\n 4: }\n 5: }\n 6: class Apple extends Fruit {\n 7: @Override\n 8: public void flavor() {\n 9: System.out.println(\"Apple flavor\");\n10: }\n11: public void color() {\n12: System.out.println(\"Red\");\n13: }\n14: }\n15: public class TestFruit {\n16: public static void main(String[] args) {\n17: Fruit myFruit = new Apple();\n18: myFruit.flavor();\n19: // myFruit.color();\n20: }\n21: }\n```\nIf the commented line // myFruit.color(); is uncommented, what will be the result of compiling and\nexecuting the above code?",
       "options": {
         "A": "It compiles and prints \"Apple flavor\" followed by \"Red\".",
         "B": "It compiles and prints \"Fruit flavor\".",
@@ -597,12 +597,12 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 12,
-      "question": "Consider the following code snippet:\n```java\nclass Animal {}\nclass Dog extends Animal {\npublic void bark() {\n```\nSystem.out.println(\"Woof\");\n```java\n}\n}\nclass Cat extends Animal {\npublic void meow() {\n```\nSystem.out.println(\"Meow\");\n```java\n}\n}\npublic class TestCasting {\npublic static void main(String[] args) {\n```\nAnimal animal = new Dog();\n((Dog)animal).bark();\nAnimal anotherAnimal = new Animal();\n// Line 1\n```java\n}\n}\n```\nWhich of the following lines of code, if inserted independently at Line 1, will compile without causing a\nruntime exception? (Choose all that apply.)",
+      "question": "Consider the following code snippet:\n```java\n 1: class Animal {}\n 2: class Dog extends Animal {\n 3: public void bark() {\n 4: System.out.println(\"Woof\");\n 5: }\n 6: }\n 7: class Cat extends Animal {\n 8: public void meow() {\n 9: System.out.println(\"Meow\");\n10: }\n11: }\n12: public class TestCasting {\n13: public static void main(String[] args) {\n14: Animal animal = new Dog();\n15: ((Dog)animal).bark();\n16: Animal anotherAnimal = new Animal();\n17: // Line 1\n18: }\n19: }\n```\nWhich of the following lines of code, if inserted independently at Line 1, will compile without causing a\nruntime exception? (Choose all that apply.)",
       "options": {
         "A": "((Dog)anotherAnimal).bark();",
         "B": "if (anotherAnimal instanceof Dog) ((Dog)anotherAnimal).bark();",
         "C": "((Cat)animal).meow();",
-        "D": "```java\nif (anotherAnimal instanceof\n```\nCat) ((Cat)anotherAnimal).meow();"
+        "D": "```java\n1: if (anotherAnimal instanceof\n```\nCat) ((Cat)anotherAnimal).meow();"
       },
       "correct_answers": [
         "B",
@@ -614,7 +614,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 13,
-      "question": "Consider the following code snippet:\n```java\npublic class AdvancedPatternMatching {\npublic static void process(Object input) {\nif (input instanceof String s && s.contains(\"Java\")) {\n```\nSystem.out.println(\"String with Java: \" + s);\n} else if (input instanceof Integer i && i > 10) {\nSystem.out.println(\"Integer greater than 10: \" + i);\n```java\n}\n}\npublic static void main(String[] args) {\nprocess(\"Hello Java!\");\nprocess(15);\nprocess(\"Just a string\");\nprocess(5);\n}\n}\n```\nGiven the above code, which statement accurately describes its execution result?",
+      "question": "Consider the following code snippet:\n```java\n 1: public class AdvancedPatternMatching {\n 2: public static void process(Object input) {\n 3: if (input instanceof String s && s.contains(\"Java\")) {\n 4: System.out.println(\"String with Java: \" + s);\n 5: } else if (input instanceof Integer i && i > 10) {\n 6: System.out.println(\"Integer greater than 10: \" + i);\n 7: }\n 8: }\n 9: public static void main(String[] args) {\n10: process(\"Hello Java!\");\n11: process(15);\n12: process(\"Just a string\");\n13: process(5);\n14: }\n15: }\n```\nGiven the above code, which statement accurately describes its execution result?",
       "options": {
         "A": "It compiles and prints \"String with Java: Hello Java!\" followed by \"Integer greater than 10: 15\".",
         "B": "It compiles but only prints \"String with Java: Hello Java!\" because integers are not supported with pattern matching.",
@@ -630,7 +630,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 14,
-      "question": "Consider the encapsulation practices in the following class structure:\n```java\npackage store;\npublic class Product {\nprivate String name;\nprivate double price;\nprivate int stock;\npublic Product(String name, double price, int stock) {\nsetName(name);\nsetPrice(price);\nsetStock(stock);\n}\npublic String getName() {\nreturn name;\n}\nprivate void setName(String name) {\n```\nthis.name = name;\n```java\n}\npublic double getPrice() {\nreturn price;\n}\nprivate void setPrice(double price) {\nif (price >= 0) {\n```\nthis.price = price;\n```java\n}\n}\npublic int getStock() {\nreturn stock;\n}\nprivate void setStock(int stock) {\nif (stock >= 0) {\n```\nthis.stock = stock;\n```java\n}\n}\n}\n```\nWhich statement is true regarding the encapsulation of the Product class?",
+      "question": "Consider the encapsulation practices in the following class structure:\n```java\n 1: package store;\n 2: public class Product {\n 3: private String name;\n 4: private double price;\n 5: private int stock;\n 6: public Product(String name, double price, int stock) {\n 7: setName(name);\n 8: setPrice(price);\n 9: setStock(stock);\n10: }\n11: public String getName() {\n12: return name;\n13: }\n14: private void setName(String name) {\n15: this.name = name;\n16: }\n17: public double getPrice() {\n18: return price;\n19: }\n20: private void setPrice(double price) {\n21: if (price >= 0) {\n22: this.price = price;\n23: }\n24: }\n25: public int getStock() {\n26: return stock;\n27: }\n28: private void setStock(int stock) {\n29: if (stock >= 0) {\n30: this.stock = stock;\n31: }\n32: }\n33: }\n```\nWhich statement is true regarding the encapsulation of the Product class?",
       "options": {
         "A": "Making the setName, setPrice, and setStock methods public would enhance the class's encapsulation.",
         "B": "The class is not encapsulated because the Product class's fields are private.",
@@ -647,7 +647,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 15,
-      "question": "Consider the following classes defined in the same package:\n```java\nclass Account {\nprivate double balance;\n```\nAccount(double initialBalance) {\n```java\nif (initialBalance > 0) {\nbalance = initialBalance;\n}\n}\nvoid deposit(double amount) {\nif (amount > 0) {\n```\nbalance += amount;\n```java\n}\n}\nprotected double getBalance() {\nreturn balance;\n}\n}\npublic class SavingsAccount extends Account {\nprivate double interestRate;\npublic SavingsAccount(double initialBalance, double interestRate) {\nsuper(initialBalance);\n```\nthis.interestRate = interestRate;\n```java\n}\npublic void applyInterest() {\ndouble interest = getBalance() * interestRate / 100;\ndeposit(interest);\n}\n}\n```\nWhich statement(s) about encapsulation principles and the use of access modifiers accurately\ndescribes the code above? Choose all tha apply.",
+      "question": "Consider the following classes defined in the same package:\n```java\n 1: class Account {\n 2: private double balance;\n 3: Account(double initialBalance) {\n 4: if (initialBalance > 0) {\n 5: balance = initialBalance;\n 6: }\n 7: }\n 8: void deposit(double amount) {\n 9: if (amount > 0) {\n10: balance += amount;\n11: }\n12: }\n13: protected double getBalance() {\n14: return balance;\n15: }\n16: }\n17: public class SavingsAccount extends Account {\n18: private double interestRate;\n19: public SavingsAccount(double initialBalance, double interestRate) {\n20: super(initialBalance);\n21: this.interestRate = interestRate;\n22: }\n23: public void applyInterest() {\n24: double interest = getBalance() * interestRate / 100;\n25: deposit(interest);\n26: }\n27: }\n```\nWhich statement(s) about encapsulation principles and the use of access modifiers accurately\ndescribes the code above? Choose all tha apply.",
       "options": {
         "A": "The SavingsAccount class cannot access the balance field directly due to its private access modifier in the Account class.",
         "B": "The getBalance method should be public to allow SavingsAccount to access the account balance.",
@@ -665,7 +665,7 @@
     {
       "topic": "Chapter 2: Utilizing Java OO Approach - Part 2",
       "question_number": 16,
-      "question": "Consider the following class:\n```java\npublic final class Contact {\nprivate final String name;\nprivate final String email;\nprivate final Address address;\npublic Contact(String name, String email, Address address) {\n```\nthis.name = name;\nthis.email = email;\nthis.address = new Address(address.getStreet(), address.getCity());\n```java\n}\npublic String getName() {\nreturn name;\n}\npublic String getEmail() {\nreturn email;\n}\npublic Address getAddress() {\nreturn new Address(address.getStreet(), address.getCity());\n}\npublic static class Address {\nprivate final String street;\nprivate final String city;\npublic Address(String street, String city) {\n```\nthis.street = street;\nthis.city = city;\n```java\n}\npublic String getStreet() {\nreturn street;\n}\npublic String getCity() {\nreturn city;\n}\n}\n}\n```\nGiven the above implementation, which statement accurately describes the Contact object?",
+      "question": "Consider the following class:\n```java\n 1: public final class Contact {\n 2: private final String name;\n 3: private final String email;\n 4: private final Address address;\n 5: public Contact(String name, String email, Address address) {\n 6: this.name = name;\n 7: this.email = email;\n 8: this.address = new Address(address.getStreet(), address.getCity());\n 9: }\n10: public String getName() {\n11: return name;\n12: }\n13: public String getEmail() {\n14: return email;\n15: }\n16: public Address getAddress() {\n17: return new Address(address.getStreet(), address.getCity());\n18: }\n19: public static class Address {\n20: private final String street;\n21: private final String city;\n22: public Address(String street, String city) {\n23: this.street = street;\n24: this.city = city;\n25: }\n26: public String getStreet() {\n27: return street;\n28: }\n29: public String getCity() {\n30: return city;\n31: }\n32: }\n33: }\n```\nGiven the above implementation, which statement accurately describes the Contact object?",
       "options": {
         "A": "The Contact object is mutable because the Address class is not final.",
         "B": "The Contact object is immutable, but only because it does not provide setters.",
@@ -682,7 +682,7 @@
     {
       "topic": "Chapter 3: Working with Records and Enums",
       "question_number": 1,
-      "question": "Consider the following record definition:\n```java\npublic record Employee(String name, int age) {}\n```\nWhich of the following statements is true about the Employee record?",
+      "question": "Consider the following record definition:\n```java\n1: public record Employee(String name, int age) {}\n```\nWhich of the following statements is true about the Employee record?",
       "options": {
         "A": "The Employee record explicitly defines a public constructor that initializes its fields.",
         "B": "The fields name and age can be reassigned to new values after an Employee object is created.",
@@ -698,7 +698,7 @@
     {
       "topic": "Chapter 3: Working with Records and Enums",
       "question_number": 2,
-      "question": "Given the record definition below:\n```java\npublic record Account(String id, double balance) {}\n```\nWhich statement accurately describes the immutability of records?",
+      "question": "Given the record definition below:\n```java\n1: public record Account(String id, double balance) {}\n```\nWhich statement accurately describes the immutability of records?",
       "options": {
         "A": "The balance field can be modified using a public setter method within the Account record.",
         "B": "Once an Account object is created, its id and balance cannot be changed.",
@@ -714,7 +714,7 @@
     {
       "topic": "Chapter 3: Working with Records and Enums",
       "question_number": 3,
-      "question": "Consider the following record declaration:\n```java\npublic record Product(int id, String name, double price) {}\n```\nHow can you correctly initialize an instance of the Product record?",
+      "question": "Consider the following record declaration:\n```java\n1: public record Product(int id, String name, double price) {}\n```\nHow can you correctly initialize an instance of the Product record?",
       "options": {
         "A": "Product p = new Product();",
         "B": "Product p = Product(101, \"Coffee\", 15.99);",
@@ -730,7 +730,7 @@
     {
       "topic": "Chapter 3: Working with Records and Enums",
       "question_number": 4,
-      "question": "Consider a record that needs to implement the Comparable interface to allow sorting based on\none of its fields. Given the following record definition:\n```java\npublic record Item(int id, String name, double price) implements Comparable<Item> {\npublic int compareTo(Item other) {\nreturn Double.compare(this.price, other.price);\n}\n}\n```\nWhich statement correctly describes how records can be customized by implementing interfaces?",
+      "question": "Consider a record that needs to implement the Comparable interface to allow sorting based on\none of its fields. Given the following record definition:\n```java\n1: public record Item(int id, String name, double price) implements Comparable<Item> {\n2: public int compareTo(Item other) {\n3: return Double.compare(this.price, other.price);\n4: }\n5: }\n```\nWhich statement correctly describes how records can be customized by implementing interfaces?",
       "options": {
         "A": "Records cannot implement interfaces because they are final and immutable by design, which prevents any form of behavior customization.",
         "B": "This record correctly implements the Comparable interface, allowing Item objects to be sorted based on their price.",
@@ -748,10 +748,10 @@
       "question_number": 5,
       "question": "Consider the ways to declare enums in Java. Which of the following declarations are valid?\n(Choose all that apply.)",
       "options": {
-        "A": "```java\npublic enum Day {\n```\nMONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY\n```java\n}\n```",
-        "B": "```java\nenum Month {\n```\nprivate JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECE\n```java\n}\n```",
-        "C": "```java\nprotected enum Season {\n```\nWINTER, SPRING, SUMMER, FALL\n```java\n}\n```",
-        "D": "```java\nenum Status {\n```\nACTIVE, INACTIVE, DELETED;\n```java\npublic void printStatus() {\n```\nSystem.out.println(\"Current status: \" + this);\n```java\n}\n}\n```"
+        "A": "```java\n1: public enum Day {\n2: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY\n3: }\n```",
+        "B": "```java\n1: enum Month {\n2: private JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECE\n3: }\n```",
+        "C": "```java\n1: protected enum Season {\n2: WINTER, SPRING, SUMMER, FALL\n3: }\n```",
+        "D": "```java\n1: enum Status {\n2: ACTIVE, INACTIVE, DELETED;\n3: public void printStatus() {\n4: System.out.println(\"Current status: \" + this);\n5: }\n6: }\n```"
       },
       "correct_answers": [
         "A",
@@ -763,7 +763,7 @@
     {
       "topic": "Chapter 3: Working with Records and Enums",
       "question_number": 6,
-      "question": "Consider the following enum declaration:\n```java\npublic enum Color {\n```\nRED, GREEN, BLUE;\n```java\n}\n```\nWhat is the result of calling Color.GREEN.ordinal()?",
+      "question": "Consider the following enum declaration:\n```java\n1: public enum Color {\n2: RED, GREEN, BLUE;\n3: }\n```\nWhat is the result of calling Color.GREEN.ordinal()?",
       "options": {
         "A": "1",
         "B": "2",
@@ -781,10 +781,10 @@
       "question_number": 7,
       "question": "Consider an enum that needs to provide a custom method to display a message based on the\nenum constant. Which of the following implementations correctly defines such an enum?",
       "options": {
-        "A": "```java\npublic enum Size {\n```\nSMALL, MEDIUM, LARGE;\n```java\npublic static void printSize() {\n```\nSystem.out.println(\"The size is \" + this.name());\n```java\n}\n}\n```",
-        "B": "```java\nenum Flavor {\n```\nCHOCOLATE, VANILLA, STRAWBERRY;\n```java\nvoid printFlavor() {\n```\nSystem.out.println(\"Flavor: \" + Flavor.name);\n```java\n}\n}\n```",
-        "C": "```java\nprotected enum Direction {\n```\nNORTH, SOUTH, EAST, WEST;\n```java\nprivate printDirection() {\n```\nSystem.out.println(\"Going \" + this.toString());\n```java\n}\n}\n```",
-        "D": "```java\npublic enum Season {\n```\nWINTER, SPRING, SUMMER, FALL;\n```java\npublic void printSeason() {\n```\nSystem.out.println(\"The season is \" + this.name());\n```java\n}\n}\n```"
+        "A": "```java\n1: public enum Size {\n2: SMALL, MEDIUM, LARGE;\n3: public static void printSize() {\n4: System.out.println(\"The size is \" + this.name());\n5: }\n6: }\n```",
+        "B": "```java\n1: enum Flavor {\n2: CHOCOLATE, VANILLA, STRAWBERRY;\n3: void printFlavor() {\n4: System.out.println(\"Flavor: \" + Flavor.name);\n5: }\n6: }\n```",
+        "C": "```java\n1: protected enum Direction {\n2: NORTH, SOUTH, EAST, WEST;\n3: private printDirection() {\n4: System.out.println(\"Going \" + this.toString());\n5: }\n6: }\n```",
+        "D": "```java\n1: public enum Season {\n2: WINTER, SPRING, SUMMER, FALL;\n3: public void printSeason() {\n4: System.out.println(\"The season is \" + this.name());\n5: }\n6: }\n```"
       },
       "correct_answers": [
         "D"
@@ -812,7 +812,7 @@
     {
       "topic": "Chapter 4: Working with Data",
       "question_number": 2,
-      "question": "What is the output of the following code snippet?\n```java\npublic class OperatorTest {\npublic static void main(String[] args) {\nint a = 5;\nint b = 10;\nint c = 15;\nint result = a + b * c / a - b;\n```\nSystem.out.println(result);\n```java\n}\n}\n```",
+      "question": "What is the output of the following code snippet?\n```java\n1: public class OperatorTest {\n2: public static void main(String[] args) {\n3: int a = 5;\n4: int b = 10;\n5: int c = 15;\n6: int result = a + b * c / a - b;\n7: System.out.println(result);\n8: }\n9: }\n```",
       "options": {
         "A": "25",
         "B": "35",
@@ -880,7 +880,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 1,
-      "question": "What will be the output of the following program?\n```java\npublic class IfStatementTest {\npublic static void main(String[] args) {\nint x = 10;\nif (x > 5) {\nif (x < 20) {\n```\nSystem.out.println(\"x is between 5 and 20\");\n```java\n}\n```\n} else {\nSystem.out.println(\"x is 5 or less\");\n```java\n}\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class IfStatementTest {\n 2: public static void main(String[] args) {\n 3: int x = 10;\n 4: if (x > 5) {\n 5: if (x < 20) {\n 6: System.out.println(\"x is between 5 and 20\");\n 7: }\n 8: } else {\n 9: System.out.println(\"x is 5 or less\");\n10: }\n11: }\n12: }\n```",
       "options": {
         "A": "x is between 5 and 20",
         "B": "x is 5 or less",
@@ -897,13 +897,13 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 2,
-      "question": "Given the following code:\n```java\nrecord Person(String name, int age) {}\nrecord Employee(int id, Person person) {}\npublic class RecordPattern {\npublic static void main(String[] args) {\n```\nEmployee emp = new Employee(1001, new Person(\"Alice\", 30));\n// Insert code here\n```java\n}\n}\n```\nWhich of the following options correctly uses record pattern matching in an if statement to extract and\nprint the name and age of a Person record in Java 21?",
+      "question": "Given the following code:\n```java\n1: record Person(String name, int age) {}\n2: record Employee(int id, Person person) {}\n3: public class RecordPattern {\n4: public static void main(String[] args) {\n5: Employee emp = new Employee(1001, new Person(\"Alice\", 30));\n6: // Insert code here\n7: }\n8: }\n```\nWhich of the following options correctly uses record pattern matching in an if statement to extract and\nprint the name and age of a Person record in Java 21?",
       "options": {
-        "A": "```java\nif (emp instanceof Employee) {\nvar (id, Person(name, age)) = emp;\n```\nSystem.out.println(name + \" is \" + age + \" years old.\");\n```java\n}\n```",
-        "B": "```java\nif (emp instanceof Employee(_, Person(var name, var age))) {\n```\nSystem.out.println(name + \" is \" + age + \" years old.\");\n```java\n}\n```",
-        "C": "```java\nif (emp instanceof Employee e) {\n```\nSystem.out.println(e.person().name() + \" is \" + e.person().age() + \" years old.\");\n```java\n}\n```",
-        "D": "```java\nif (emp instanceof Employee(var id, Person(var name, var age))) {\n```\nSystem.out.println(name + \" is \" + age + \" years old.\");\n```java\n}\n```",
-        "E": "```java\nif (emp instanceof Employee(var id, var person)) {\n```\nSystem.out.println(person.name() + \" is \" + person.age() + \" years old.\");\n```java\n}\n```"
+        "A": "```java\n1: if (emp instanceof Employee) {\n2: var (id, Person(name, age)) = emp;\n3: System.out.println(name + \" is \" + age + \" years old.\");\n4: }\n```",
+        "B": "```java\n1: if (emp instanceof Employee(_, Person(var name, var age))) {\n2: System.out.println(name + \" is \" + age + \" years old.\");\n3: }\n```",
+        "C": "```java\n1: if (emp instanceof Employee e) {\n2: System.out.println(e.person().name() + \" is \" + e.person().age() + \" years old.\");\n3: }\n```",
+        "D": "```java\n1: if (emp instanceof Employee(var id, Person(var name, var age))) {\n2: System.out.println(name + \" is \" + age + \" years old.\");\n3: }\n```",
+        "E": "```java\n1: if (emp instanceof Employee(var id, var person)) {\n2: System.out.println(person.name() + \" is \" + person.age() + \" years old.\");\n3: }\n```"
       },
       "correct_answers": [
         "D"
@@ -914,7 +914,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 3,
-      "question": "Which of the following code snippets compile without error?\n```java\npublic class FlowScopingTest {\npublic static void main(String[] args) {\nint x = 10;\nif (x > 5) {\nint y = x * 2;\n}\n```\n// Code snippet 1\nSystem.out.println(y);\n```java\nif (x < 20) {\nint z = x + 5;\n}\n```\n// Code snippet 2\nz += 5;\n```java\nint a = 5;\nif (a > 0) {\na = 15;\n}\n```\n// Code snippet 3\nSystem.out.println(a);\n```java\nif (x > 0) {\nint b = x + 3;\nif (b > 15) {\n```\nb -= 2;\n```java\n}\n}\n```\n// Code snippet 4\nSystem.out.println(b);\n```java\n}\n}\n```",
+      "question": "Which of the following code snippets compile without error?\n```java\n 1: public class FlowScopingTest {\n 2: public static void main(String[] args) {\n 3: int x = 10;\n 4: if (x > 5) {\n 5: int y = x * 2;\n 6: }\n 7: // Code snippet 1\n 8: System.out.println(y);\n 9: if (x < 20) {\n10: int z = x + 5;\n11: }\n12: // Code snippet 2\n13: z += 5;\n14: int a = 5;\n15: if (a > 0) {\n16: a = 15;\n17: }\n18: // Code snippet 3\n19: System.out.println(a);\n20: if (x > 0) {\n21: int b = x + 3;\n22: if (b > 15) {\n23: b -= 2;\n24: }\n25: }\n26: // Code snippet 4\n27: System.out.println(b);\n28: }\n29: }\n```",
       "options": {
         "A": "Code snippet 1",
         "B": "Code snippet 2",
@@ -930,7 +930,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 4,
-      "question": "What will be the output of the following program?\n```java\npublic class SwitchTest {\npublic static void main(String[] args) {\nint dayOfWeek = 3;\n```\nString dayType;\n```java\nswitch (dayOfWeek) {\n```\ncase 1:\ncase 7:\n```java\ndayType = \"Weekend\";\n```\nbreak;\ncase 2:\ncase 3:\ncase 4:\ncase 5:\ncase 6:\n```java\ndayType = \"Weekday\";\n```\nbreak;\ndefault:\n```java\ndayType = \"Invalid day\";\n}\n```\nSystem.out.println(dayType);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class SwitchTest {\n 2: public static void main(String[] args) {\n 3: int dayOfWeek = 3;\n 4: String dayType;\n 5: switch (dayOfWeek) {\n 6: case 1:\n 7: case 7:\n 8: dayType = \"Weekend\";\n 9: break;\n10: case 2:\n11: case 3:\n12: case 4:\n13: case 5:\n14: case 6:\n15: dayType = \"Weekday\";\n16: break;\n17: default:\n18: dayType = \"Invalid day\";\n19: }\n20: System.out.println(dayType);\n21: }\n22: }\n```",
       "options": {
         "A": "Weekend",
         "B": "Invalid day",
@@ -947,7 +947,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 5,
-      "question": "What will be the output of the following program?\n```java\npublic class SwitchExpressionTest {\npublic static void main(String[] args) {\nint score = 85;\n```\nString grade = switch (score) {\ncase 90, 100 -> \"A\";\ncase 80, 89 -> \"B\";\ncase 70, 79 -> \"C\";\ncase 60, 69 -> \"D\";\ndefault -> \"F\";\n};\nSystem.out.println(grade);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class SwitchExpressionTest {\n 2: public static void main(String[] args) {\n 3: int score = 85;\n 4: String grade = switch (score) {\n 5: case 90, 100 -> \"A\";\n 6: case 80, 89 -> \"B\";\n 7: case 70, 79 -> \"C\";\n 8: case 60, 69 -> \"D\";\n 9: default -> \"F\";\n10: };\n11: System.out.println(grade);\n12: }\n13: }\n```",
       "options": {
         "A": "A",
         "B": "F",
@@ -964,7 +964,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 6,
-      "question": "Given the following code:\n```java\npublic class SwitchEnums {\n```\nsealed interface Vehicle permits CarType {}\n```java\nenum CarType implements Vehicle { SEDAN, SUV, HATCHBACK, CONVERTIBLE }\nvoid processVehicle(Vehicle v) {\nswitch(v) {\n```\n// Insert case statements here\n```java\n}\n}\n}\n```\nWhich of the following case statements are valid in Java 21 when inserted in the switch expression?",
+      "question": "Given the following code:\n```java\n1: public class SwitchEnums {\n2: sealed interface Vehicle permits CarType {}\n3: enum CarType implements Vehicle { SEDAN, SUV, HATCHBACK, CONVERTIBLE }\n4: void processVehicle(Vehicle v) {\n5: switch(v) {\n6: // Insert case statements here\n7: }\n8: }\n9: }\n```\nWhich of the following case statements are valid in Java 21 when inserted in the switch expression?",
       "options": {
         "A": "case CarType.SEDAN, CarType.HATCHBACK -> System.out.println(\"Compact vehicle\"); case CarType.SUV -> System.out.println(\"Large vehicle\"); case CarType.CONVERTIBLE -> System.out.println(\"Open-top vehicle\");",
         "B": "case SEDAN, HATCHBACK -> System.out.println(\"Compact vehicle\"); case SUV -> System.out.println(\"Large vehicle\"); case CONVERTIBLE -> System.out.println(\"Open-top vehicle\");",
@@ -980,7 +980,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 7,
-      "question": "Given the following code:\nsealed interface Shape permits Circle, Square, Triangle {}\n```java\nrecord Circle(double radius) implements Shape {}\nrecord Square(double side) implements Shape {}\nrecord Triangle(double base, double height) implements Shape {}\n```\nShape shape = new Circle(5);\n```java\ndouble area = switch (shape) {\n```\n// Insert case statements here\n};\nWhich of the following case statements correctly implements pattern matching for the Shape hierarchy\nwhen inserted in the switch expression?",
+      "question": "Given the following code:\nsealed interface Shape permits Circle, Square, Triangle {}\n```java\n1: record Circle(double radius) implements Shape {}\n2: record Square(double side) implements Shape {}\n3: record Triangle(double base, double height) implements Shape {}\n4: Shape shape = new Circle(5);\n5: double area = switch (shape) {\n```\n// Insert case statements here\n};\nWhich of the following case statements correctly implements pattern matching for the Shape hierarchy\nwhen inserted in the switch expression?",
       "options": {
         "A": "case Circle c -> Math.PI * c.radius() * c.radius(); case Square s -> s.side() * s.side(); case null -> 0;",
         "B": "default -> 0; case Circle c -> Math.PI * c.radius() * c.radius(); case Square s -> s.side() * s.side(); case Triangle t -> 0.5 * t.base() * t.height();",
@@ -996,7 +996,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 8,
-      "question": "What will be the output of the following program?\n```java\npublic class LabeledBreakTest {\npublic static void main(String[] args) {\nint count = 0;\n```\nouterLoop:\n```java\nwhile (count < 5) {\nwhile (true) {\n```\ncount++;\n```java\nif (count == 3) {\n```\nbreak outerLoop;\n```java\n}\n}\n}\n```\nSystem.out.println(count);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class LabeledBreakTest {\n 2: public static void main(String[] args) {\n 3: int count = 0;\n 4: outerLoop:\n 5: while (count < 5) {\n 6: while (true) {\n 7: count++;\n 8: if (count == 3) {\n 9: break outerLoop;\n10: }\n11: }\n12: }\n13: System.out.println(count);\n14: }\n15: }\n```",
       "options": {
         "A": "2",
         "B": "3",
@@ -1013,7 +1013,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 9,
-      "question": "What will be the output of the following program?\n```java\npublic class ForLoopTest {\npublic static void main(String[] args) {\nint sum = 0;\nfor (int i = 1; i <= 5; i++) {\n```\nsum += i;\n```java\n}\n```\nSystem.out.println(sum);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n1: public class ForLoopTest {\n2: public static void main(String[] args) {\n3: int sum = 0;\n4: for (int i = 1; i <= 5; i++) {\n5: sum += i;\n6: }\n7: System.out.println(sum);\n8: }\n9: }\n```",
       "options": {
         "A": "5",
         "B": "10",
@@ -1030,7 +1030,7 @@
     {
       "topic": "Chapter 5: Controlling Program Flow",
       "question_number": 10,
-      "question": "What will be the output of the following program?\n```java\npublic class EnhancedForLoopTest {\npublic static void main(String[] args) {\nint[] numbers = {1, 2, 3, 4, 5};\nint sum = 0;\nfor (int num : numbers) {\nif (num % 2 == 0) {\n```\ncontinue;\n```java\n}\n```\nsum += num;\n```java\n}\n```\nSystem.out.println(sum);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: public class EnhancedForLoopTest {\n 2: public static void main(String[] args) {\n 3: int[] numbers = {1, 2, 3, 4, 5};\n 4: int sum = 0;\n 5: for (int num : numbers) {\n 6: if (num % 2 == 0) {\n 7: continue;\n 8: }\n 9: sum += num;\n10: }\n11: System.out.println(sum);\n12: }\n13: }\n```",
       "options": {
         "A": "9",
         "B": "10",
@@ -1047,7 +1047,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 1,
-      "question": "What is the output of the following program?\n```java\npublic class MultiDimArray {\npublic static void main(String[] args) {\nint[][] arr = new int[2][3];\nfor (int i = 0; i < arr.length; i++) {\nfor (int j = 0; j < arr[i].length; j++) {\narr[i][j] = i + j;\n}\n}\nfor (int i = 0; i < arr.length; i++) {\nfor (int j = 0; j < arr[i].length; j++) {\n```\nSystem.out.print(arr[i][j] + \" \");\n```java\n}\n```\nSystem.out.println();\n```java\n}\n}\n}\n```",
+      "question": "What is the output of the following program?\n```java\n 1: public class MultiDimArray {\n 2: public static void main(String[] args) {\n 3: int[][] arr = new int[2][3];\n 4: for (int i = 0; i < arr.length; i++) {\n 5: for (int j = 0; j < arr[i].length; j++) {\n 6: arr[i][j] = i + j;\n 7: }\n 8: }\n 9: for (int i = 0; i < arr.length; i++) {\n10: for (int j = 0; j < arr[i].length; j++) {\n11: System.out.print(arr[i][j] + \" \");\n12: }\n13: System.out.println();\n14: }\n15: }\n16: }\n```",
       "options": {
         "A": "0 0 0 0 0 0",
         "B": "0 1 2 0 1 2",
@@ -1065,10 +1065,10 @@
       "question_number": 2,
       "question": "Which of the following generic method definitions correctly declares a method that returns the\nfirst element of a given array?",
       "options": {
-        "A": "```java\npublic static T getFirstElement(T[] array) {\nreturn array[0];\n}\n```",
-        "B": "```java\npublic static <T> T getFirstElement(T[] array) {\nreturn array[0];\n}\n```",
-        "C": "```java\npublic static <T> getFirstElement(T[] array) {\nreturn array[0];\n}\n```",
-        "D": "```java\npublic static <T> T[] getFirstElement(T[] array) {\nreturn array[0];\n}\n```"
+        "A": "```java\n1: public static T getFirstElement(T[] array) {\n2: return array[0];\n3: }\n```",
+        "B": "```java\n1: public static <T> T getFirstElement(T[] array) {\n2: return array[0];\n3: }\n```",
+        "C": "```java\n1: public static <T> getFirstElement(T[] array) {\n2: return array[0];\n3: }\n```",
+        "D": "```java\n1: public static <T> T[] getFirstElement(T[] array) {\n2: return array[0];\n3: }\n```"
       },
       "correct_answers": [
         "B"
@@ -1079,7 +1079,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 3,
-      "question": "What is the result of compiling and running the following code?\n```java\nimport java.util.*;\npublic class WildcardTest {\npublic static void printList(List<? extends Number> list) {\nfor (Number n : list) {\n```\nSystem.out.print(n + \" \");\n```java\n}\n```\nSystem.out.println();\n```java\n}\npublic static void main(String[] args) {\n```\nList<Integer> ints = Arrays.asList(1, 2, 3);\nList<Double> doubles = Arrays.asList(1.1, 2.2, 3.3);\nList<String> strings = Arrays.asList(\"one\", \"two\", \"three\");\n```java\nprintList(ints);\nprintList(doubles);\nprintList(strings);\n}\n}\n```",
+      "question": "What is the result of compiling and running the following code?\n```java\n 1: import java.util.*;\n 2: public class WildcardTest {\n 3: public static void printList(List<? extends Number> list) {\n 4: for (Number n : list) {\n 5: System.out.print(n + \" \");\n 6: }\n 7: System.out.println();\n 8: }\n 9: public static void main(String[] args) {\n10: List<Integer> ints = Arrays.asList(1, 2, 3);\n11: List<Double> doubles = Arrays.asList(1.1, 2.2, 3.3);\n12: List<String> strings = Arrays.asList(\"one\", \"two\", \"three\");\n13: printList(ints);\n14: printList(doubles);\n15: printList(strings);\n16: }\n17: }\n```",
       "options": {
         "A": "The code compiles and prints: 1 2 3 1.1 2.2 3.3 one two three",
         "B": "The code compiles and prints: 1 2 3 1.1 2.2 3.3",
@@ -1096,7 +1096,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 4,
-      "question": "What is the output of the following program?\n```java\nimport java.util.*;\npublic class ListExample {\npublic static void main(String[] args) {\n```\nList<String> list = new ArrayList<>(Arrays.asList(\"A\", \"B\", \"C\", \"D\"));\nlist.add(2, \"E\");\nSystem.out.println(list);\n```java\n}\n}\n```",
+      "question": "What is the output of the following program?\n```java\n1: import java.util.*;\n2: public class ListExample {\n3: public static void main(String[] args) {\n4: List<String> list = new ArrayList<>(Arrays.asList(\"A\", \"B\", \"C\", \"D\"));\n5: list.add(2, \"E\");\n6: System.out.println(list);\n7: }\n8: }\n```",
       "options": {
         "A": "[A, B, E, C, D]",
         "B": "[A, E, B, C, D]",
@@ -1131,7 +1131,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 6,
-      "question": "What will be the output of the following program?\n```java\nimport java.util.*;\npublic class DequeExample {\npublic static void main(String[] args) {\n```\nDeque<String> deque = new ArrayDeque<>();\ndeque.addFirst(\"A\");\ndeque.addLast(\"B\");\ndeque.addFirst(\"C\");\ndeque.addLast(\"D\");\nSystem.out.println(deque);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: import java.util.*;\n 2: public class DequeExample {\n 3: public static void main(String[] args) {\n 4: Deque<String> deque = new ArrayDeque<>();\n 5: deque.addFirst(\"A\");\n 6: deque.addLast(\"B\");\n 7: deque.addFirst(\"C\");\n 8: deque.addLast(\"D\");\n 9: System.out.println(deque);\n10: }\n11: }\n```",
       "options": {
         "A": "[A, B, C, D]",
         "B": "[C, B, A, D]",
@@ -1148,7 +1148,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 7,
-      "question": "What will be the output of the following program?\n```java\nimport java.util.*;\npublic class MapExample {\npublic static void main(String[] args) {\n```\nMap<Integer, String> map = new HashMap<>();\nmap.put(1, \"A\");\nmap.put(2, \"B\");\nmap.put(3, \"C\");\nmap.put(2, \"D\");\nSystem.out.println(map);\n```java\n}\n}\n```",
+      "question": "What will be the output of the following program?\n```java\n 1: import java.util.*;\n 2: public class MapExample {\n 3: public static void main(String[] args) {\n 4: Map<Integer, String> map = new HashMap<>();\n 5: map.put(1, \"A\");\n 6: map.put(2, \"B\");\n 7: map.put(3, \"C\");\n 8: map.put(2, \"D\");\n 9: System.out.println(map);\n10: }\n11: }\n```",
       "options": {
         "A": "{1=A, 2=B, 3=C, 2=D}",
         "B": "{1=A, 2=B, 3=C}",
@@ -1165,7 +1165,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 8,
-      "question": "What is the result of running the following program?\n```java\nimport java.util.*;\npublic class ComparableExample {\npublic static void main(String[] args) {\n```\nList<Person> people = new ArrayList<>();\npeople.add(new Person(\"Alice\", 30));\npeople.add(new Person(\"Bob\", 25));\npeople.add(new Person(\"Charlie\", 35));\nCollections.sort(people);\n```java\nfor (Person p : people) {\n```\nSystem.out.println(p.getName() + \" \" + p.getAge());\n```java\n}\n}\n}\nclass Person implements Comparable<Person> {\nprivate String name;\nprivate int age;\npublic Person(String name, int age) {\n```\nthis.name = name;\nthis.age = age;\n```java\n}\npublic String getName() {\nreturn name;\n}\npublic int getAge() {\nreturn age;\n}\n```\n@Override\n```java\npublic int compareTo(Person other) {\nreturn Integer.compare(this.age, other.age);\n}\n}\n```",
+      "question": "What is the result of running the following program?\n```java\n 1: import java.util.*;\n 2: public class ComparableExample {\n 3: public static void main(String[] args) {\n 4: List<Person> people = new ArrayList<>();\n 5: people.add(new Person(\"Alice\", 30));\n 6: people.add(new Person(\"Bob\", 25));\n 7: people.add(new Person(\"Charlie\", 35));\n 8: Collections.sort(people);\n 9: for (Person p : people) {\n10: System.out.println(p.getName() + \" \" + p.getAge());\n11: }\n12: }\n13: }\n14: class Person implements Comparable<Person> {\n15: private String name;\n16: private int age;\n17: public Person(String name, int age) {\n18: this.name = name;\n19: this.age = age;\n20: }\n21: public String getName() {\n22: return name;\n23: }\n24: public int getAge() {\n25: return age;\n26: }\n27: @Override\n28: public int compareTo(Person other) {\n29: return Integer.compare(this.age, other.age);\n30: }\n31: }\n```",
       "options": {
         "A": "Alice 30 Bob 25 Charlie 35",
         "B": "Charlie 35 Alice 30 Bob 25",
@@ -1182,7 +1182,7 @@
     {
       "topic": "Chapter 6: Arrays, Generics, and Collections",
       "question_number": 9,
-      "question": "What will be the output of the following program when using the provided Comparator?\n```java\nimport java.util.*;\npublic class ComparatorExample {\npublic static void main(String[] args) {\n```\nList<Person> people = new ArrayList<>();\npeople.add(new Person(\"Alice\", 30));\npeople.add(new Person(\"Bob\", 25));\npeople.add(new Person(\"Charlie\", 35));\nCollections.sort(people, new AgeComparator());\n```java\nfor (Person p : people) {\n```\nSystem.out.println(p.getName() + \" \" + p.getAge());\n```java\n}\n}\n}\nclass Person {\nprivate String name;\nprivate int age;\npublic Person(String name, int age) {\n```\nthis.name = name;\nthis.age = age;\n```java\n}\npublic String getName() {\nreturn name;\n}\npublic int getAge() {\nreturn age;\n}\n}\nclass AgeComparator implements Comparator<Person> {\n```\n@Override\n```java\npublic int compare(Person p1, Person p2) {\nreturn Integer.compare(p1.getAge(), p2.getAge());\n}\n}\n```",
+      "question": "What will be the output of the following program when using the provided Comparator?\n```java\n 1: import java.util.*;\n 2: public class ComparatorExample {\n 3: public static void main(String[] args) {\n 4: List<Person> people = new ArrayList<>();\n 5: people.add(new Person(\"Alice\", 30));\n 6: people.add(new Person(\"Bob\", 25));\n 7: people.add(new Person(\"Charlie\", 35));\n 8: Collections.sort(people, new AgeComparator());\n 9: for (Person p : people) {\n10: System.out.println(p.getName() + \" \" + p.getAge());\n11: }\n12: }\n13: }\n14: class Person {\n15: private String name;\n16: private int age;\n17: public Person(String name, int age) {\n18: this.name = name;\n19: this.age = age;\n20: }\n21: public String getName() {\n22: return name;\n23: }\n24: public int getAge() {\n25: return age;\n26: }\n27: }\n28: class AgeComparator implements Comparator<Person> {\n29: @Override\n30: public int compare(Person p1, Person p2) {\n31: return Integer.compare(p1.getAge(), p2.getAge());\n32: }\n33: }\n```",
       "options": {
         "A": "Bob 25 Alice 30 Charlie 35",
         "B": "Charlie 35 Alice 30 Bob 25",
@@ -1213,7 +1213,7 @@
     {
       "topic": "Chapter 7: Error Handling and Exceptions",
       "question_number": 2,
-      "question": "Which of the following code snippets correctly defines and throws a custom checked\nexception?\n```java\npublic class CustomException extends Exception {\npublic CustomException(String message) {\nsuper(message);\n}\n}\npublic class TestCustomException {\npublic static void main(String[] args) {\ntry {\nmethodThatThrowsException();\n```\n} catch (CustomException e) {\nSystem.out.println(e.getMessage());\n```java\n}\n}\npublic static void methodThatThrowsException() throws CustomException {\nthrow new CustomException(\"This is a custom checked exception\");\n}\n}\n```",
+      "question": "Which of the following code snippets correctly defines and throws a custom checked\nexception?\n```java\n 1: public class CustomException extends Exception {\n 2: public CustomException(String message) {\n 3: super(message);\n 4: }\n 5: }\n 6: public class TestCustomException {\n 7: public static void main(String[] args) {\n 8: try {\n 9: methodThatThrowsException();\n10: } catch (CustomException e) {\n11: System.out.println(e.getMessage());\n12: }\n13: }\n14: public static void methodThatThrowsException() throws CustomException {\n15: throw new CustomException(\"This is a custom checked exception\");\n16: }\n17: }\n```",
       "options": {
         "A": "This code defines a custom checked exception and correctly throws and handles it.",
         "B": "This code defines a custom unchecked exception.",
@@ -1229,7 +1229,7 @@
     {
       "topic": "Chapter 7: Error Handling and Exceptions",
       "question_number": 3,
-      "question": "Given the following class, what is the result?\n```java\npublic class Main {\nprotected static int myMethod() {\ntry {\nthrow new RuntimeException();\n```\n} catch(RuntimeException e) {\n```java\nreturn 1;\n```\n} finally {\n```java\nreturn 2;\n}\n}\npublic static void main(String[] args) {\n```\nSystem.out.println(myMethod());\n```java\n}\n}\n```",
+      "question": "Given the following class, what is the result?\n```java\n 1: public class Main {\n 2: protected static int myMethod() {\n 3: try {\n 4: throw new RuntimeException();\n 5: } catch(RuntimeException e) {\n 6: return 1;\n 7: } finally {\n 8: return 2;\n 9: }\n10: }\n11: public static void main(String[] args) {\n12: System.out.println(myMethod());\n13: }\n14: }\n```",
       "options": {
         "A": "1",
         "B": "2",
@@ -1245,7 +1245,7 @@
     {
       "topic": "Chapter 7: Error Handling and Exceptions",
       "question_number": 4,
-      "question": "Given the following class, which of the following statement is true?\n```java\npublic class Main {\npublic static void main(String[] args) {\ntry {\n```\n// Do nothing\n} finally {\n// Do nothing\n```java\n}\n}\n}\n```",
+      "question": "Given the following class, which of the following statement is true?\n```java\n1: public class Main {\n2: public static void main(String[] args) {\n3: try {\n4: // Do nothing\n5: } finally {\n6: // Do nothing\n7: }\n8: }\n9: }\n```",
       "options": {
         "A": "The code doesn't compile correctly.",
         "B": "The code would compile correctly if we add a catch block.",
@@ -1278,7 +1278,7 @@
     {
       "topic": "Chapter 7: Error Handling and Exceptions",
       "question_number": 6,
-      "question": "Given the following class, what is the result?:\n```java\nclass Connection implements java.io.Closeable {\npublic void close() throws IOException {\nthrow new IOException(\"Close Exception\");\n}\n}\npublic class Main {\npublic static void main(String[] args) {\ntry (Connection c = new Connection()) {\nthrow new RuntimeException(\"RuntimeException\");\n```\n} catch (IOException e) {\nSystem.err.println(e.getMessage());\n```java\n}\n}\n}\n```",
+      "question": "Given the following class, what is the result?:\n```java\n 1: class Connection implements java.io.Closeable {\n 2: public void close() throws IOException {\n 3: throw new IOException(\"Close Exception\");\n 4: }\n 5: }\n 6: public class Main {\n 7: public static void main(String[] args) {\n 8: try (Connection c = new Connection()) {\n 9: throw new RuntimeException(\"RuntimeException\");\n10: } catch (IOException e) {\n11: System.err.println(e.getMessage());\n12: }\n13: }\n14: }\n```",
       "options": {
         "A": "Close Exception",
         "B": "RuntimeException",
@@ -1312,7 +1312,7 @@
     {
       "topic": "Chapter 7: Error Handling and Exceptions",
       "question_number": 8,
-      "question": "Given the following code, what is the result?\n```java\nclass MyResource implements AutoCloseable {\npublic void close() {\nthrow new RuntimeException(\"Close Exception\");\n}\n}\npublic class Main {\npublic static void main(String[] args) {\ntry (MyResource resource = new MyResource()) {\nthrow new RuntimeException(\"Try Block Exception\");\n```\n} catch (RuntimeException e) {\nThrowable[] suppressed = e.getSuppressed();\n```java\nif (suppressed.length > 0) {\nfor (Throwable t : suppressed) {\n```\nSystem.out.println(\"Suppressed: \" + t.getMessage());\n```java\n}\n```\n} else {\nSystem.out.println(e.getMessage());\n```java\n}\n}\n}\n}\n```",
+      "question": "Given the following code, what is the result?\n```java\n 1: class MyResource implements AutoCloseable {\n 2: public void close() {\n 3: throw new RuntimeException(\"Close Exception\");\n 4: }\n 5: }\n 6: public class Main {\n 7: public static void main(String[] args) {\n 8: try (MyResource resource = new MyResource()) {\n 9: throw new RuntimeException(\"Try Block Exception\");\n10: } catch (RuntimeException e) {\n11: Throwable[] suppressed = e.getSuppressed();\n12: if (suppressed.length > 0) {\n13: for (Throwable t : suppressed) {\n14: System.out.println(\"Suppressed: \" + t.getMessage());\n15: }\n16: } else {\n17: System.out.println(e.getMessage());\n18: }\n19: }\n20: }\n21: }\n```",
       "options": {
         "A": "Only \"Try Block Exception\" is printed.",
         "B": "Only \"Close Exception\" is printed.",
@@ -1379,7 +1379,7 @@
     {
       "topic": "Chapter 8: Functional Interfaces and Lambdas",
       "question_number": 4,
-      "question": "What is the output of the following code?\n```java\nimport java.util.function.Function;\npublic class Main {\npublic static void main(String[] args) {\n```\nFunction<Integer, Integer> multiplyByTwo = x -> x * 2;\nFunction<Integer, Integer> addThree = x -> x + 3;\nFunction<Integer, Integer> combinedFunction = multiplyByTwo.andThen(addThree);\nSystem.out.println(combinedFunction.apply(5));\n```java\n}\n}\n```",
+      "question": "What is the output of the following code?\n```java\n1: import java.util.function.Function;\n2: public class Main {\n3: public static void main(String[] args) {\n4: Function<Integer, Integer> multiplyByTwo = x -> x * 2;\n5: Function<Integer, Integer> addThree = x -> x + 3;\n6: Function<Integer, Integer> combinedFunction = multiplyByTwo.andThen(addThree);\n7: System.out.println(combinedFunction.apply(5));\n8: }\n9: }\n```",
       "options": {
         "A": "13",
         "B": "16",
@@ -1396,7 +1396,7 @@
     {
       "topic": "Chapter 8: Functional Interfaces and Lambdas",
       "question_number": 5,
-      "question": "Which of the following method references correctly replaces the lambda expression in the\ncode below?\n```java\nimport java.util.function.Function;\npublic class Main {\npublic static void main(String[] args) {\n```\nFunction<String, Integer> func = str -> Integer.parseInt(str);\nSystem.out.println(func.apply(\"123\"));\n```java\n}\n}\n```",
+      "question": "Which of the following method references correctly replaces the lambda expression in the\ncode below?\n```java\n1: import java.util.function.Function;\n2: public class Main {\n3: public static void main(String[] args) {\n4: Function<String, Integer> func = str -> Integer.parseInt(str);\n5: System.out.println(func.apply(\"123\"));\n6: }\n7: }\n```",
       "options": {
         "A": "String::valueOf",
         "B": "Integer::valueOf",
@@ -1413,7 +1413,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 1,
-      "question": "Which of the following lines of code demonstrates the use of the Optional class to handle a\npotentially null value to avoid an exception?\n```java\nimport java.util.Optional;\npublic class Main {\npublic static void main(String[] args) {\n```\nString value = getValue();\n// Insert code here\n```java\n}\npublic static String getValue() {\nreturn null; // This method may return null\n}\n}\n```",
+      "question": "Which of the following lines of code demonstrates the use of the Optional class to handle a\npotentially null value to avoid an exception?\n```java\n 1: import java.util.Optional;\n 2: public class Main {\n 3: public static void main(String[] args) {\n 4: String value = getValue();\n 5: // Insert code here\n 6: }\n 7: public static String getValue() {\n 8: return null; // This method may return null\n 9: }\n10: }\n```",
       "options": {
         "A": "Optional<String> Optional<String> optional = optional optional = = new Optional.of(value); Optional.ofNullable(value);",
         "D": "",
@@ -1430,7 +1430,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 2,
-      "question": "Which of the following lines of code correctly demonstrates the use of a terminal operation?\n```java\nimport java.util.List;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\nStream<String> stream = list.stream()\n.filter(s -> s.length() > 5)\n.peek(System.out::println)\n.map(String::toUpperCase);\n// Insert terminal operation here\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly demonstrates the use of a terminal operation?\n```java\n 1: import java.util.List;\n 2: import java.util.stream.Collectors;\n 3: import java.util.stream.Stream;\n 4: public class Main {\n 5: public static void main(String[] args) {\n 6: List<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\n 7: Stream<String> stream = list.stream()\n 8: .filter(s -> s.length() > 5)\n 9: .peek(System.out::println)\n10: .map(String::toUpperCase);\n11: // Insert terminal operation here\n12: }\n13: }\n```",
       "options": {
         "A": "stream.filter(s -> s.contains(\"A\"));",
         "B": "stream.map(String::toLowerCase);",
@@ -1447,13 +1447,13 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 3,
-      "question": "Which of the following lines of code correctly uses a primitive stream to calculate the sum of\nan array of integers?\n```java\nimport java.util.stream.IntStream;\npublic class Main {\npublic static void main(String[] args) {\nint[] numbers = {1, 2, 3, 4, 5};\n```\n// Insert code here to calculate sum\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly uses a primitive stream to calculate the sum of\nan array of integers?\n```java\n1: import java.util.stream.IntStream;\n2: public class Main {\n3: public static void main(String[] args) {\n4: int[] numbers = {1, 2, 3, 4, 5};\n5: // Insert code here to calculate sum\n6: }\n7: }\n```",
       "options": {
         "A": "int sum = numbers.stream().sum(); numbers.length).sum();",
         "C": "int sum =",
-        "B": "int\nsum\n=\n```java\nIntStream.range(0,\n\nIntStream.from(numbers).sum();\n```",
-        "D": "int\nsum\n=\n```java\nIntStream.of(numbers).sum();\n```",
-        "E": "```java\nint sum = IntStream.range(numbers).sum();\n```"
+        "B": "int\nsum\n=\n```java\n1: IntStream.range(0,\n2: \n3: IntStream.from(numbers).sum();\n```",
+        "D": "int\nsum\n=\n```java\n1: IntStream.of(numbers).sum();\n```",
+        "E": "```java\n1: int sum = IntStream.range(numbers).sum();\n```"
       },
       "correct_answers": [
         "D"
@@ -1464,7 +1464,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 4,
-      "question": "Which of the following lines of code correctly filters a stream to include only strings with a\nlength greater than 3?\n```java\nimport java.util.List;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list = List.of(\"one\", \"two\", \"three\", \"four\");\nStream<String> stream = list.stream();\n// Insert code here to filter the stream\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly filters a stream to include only strings with a\nlength greater than 3?\n```java\n 1: import java.util.List;\n 2: import java.util.stream.Collectors;\n 3: import java.util.stream.Stream;\n 4: public class Main {\n 5: public static void main(String[] args) {\n 6: List<String> list = List.of(\"one\", \"two\", \"three\", \"four\");\n 7: Stream<String> stream = list.stream();\n 8: // Insert code here to filter the stream\n 9: }\n10: }\n```",
       "options": {
         "A": "Stream<String> filteredStream = stream.filter(s -> s.length() > 3);",
         "B": "Stream<String> filteredStream = stream.map(s > 3);",
@@ -1481,12 +1481,12 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 5,
-      "question": "Which of the following lines of code correctly maps a stream of strings to their lengths?\n```java\nimport java.util.List;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\nStream<String> stream = list.stream();\n// Insert code here to map the stream\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly maps a stream of strings to their lengths?\n```java\n 1: import java.util.List;\n 2: import java.util.stream.Collectors;\n 3: import java.util.stream.Stream;\n 4: public class Main {\n 5: public static void main(String[] args) {\n 6: List<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\n 7: Stream<String> stream = list.stream();\n 8: // Insert code here to map the stream\n 9: }\n10: }\n```",
       "options": {
         "A": "Stream<String> lengthStream Stream<String> lengthStream Stream<Integer> lengthStream = = stream.map(s -> s.length());",
         "B": "stream.mapToInt(s -> s.length());",
         "C": "= stream.map(s -> s.length());",
-        "D": "IntStream\n```java\nlengthStream = stream.map(s -> s.length());\n```",
+        "D": "IntStream\n```java\n1: lengthStream = stream.map(s -> s.length());\n```",
         "E": "Stream<String> lengthStream = stream.flatMap(s -> Stream.of(s.length()));"
       },
       "correct_answers": [
@@ -1498,7 +1498,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 6,
-      "question": "Which of the following lines of code correctly limits the stream to the first 3 elements after\nskipping the first 2 elements?\n```java\nimport java.util.List;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list = List.of(\"one\", \"two\", \"three\", \"four\", \"five\", \"six\");\nStream<String> stream = list.stream();\n// Insert code here to skip and limit the stream\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly limits the stream to the first 3 elements after\nskipping the first 2 elements?\n```java\n 1: import java.util.List;\n 2: import java.util.stream.Collectors;\n 3: import java.util.stream.Stream;\n 4: public class Main {\n 5: public static void main(String[] args) {\n 6: List<String> list = List.of(\"one\", \"two\", \"three\", \"four\", \"five\", \"six\");\n 7: Stream<String> stream = list.stream();\n 8: // Insert code here to skip and limit the stream\n 9: }\n10: }\n```",
       "options": {
         "A": "Stream<String> resultStream =",
         "B": "stream.skip(2).limit(3); Stream<String> resultStream = stream.limit(3).skip(2);",
@@ -1515,7 +1515,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 7,
-      "question": "Which of the following lines of code correctly concatenates two streams?\n```java\nimport java.util.List;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list1 = List.of(\"one\", \"two\", \"three\");\nList<String> list2 = List.of(\"four\", \"five\", \"six\");\nStream<String> stream1 = list1.stream();\nStream<String> stream2 = list2.stream();\n// Insert code here to concatenate the streams\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly concatenates two streams?\n```java\n 1: import java.util.List;\n 2: import java.util.stream.Collectors;\n 3: import java.util.stream.Stream;\n 4: public class Main {\n 5: public static void main(String[] args) {\n 6: List<String> list1 = List.of(\"one\", \"two\", \"three\");\n 7: List<String> list2 = List.of(\"four\", \"five\", \"six\");\n 8: Stream<String> stream1 = list1.stream();\n 9: Stream<String> stream2 = list2.stream();\n10: // Insert code here to concatenate the streams\n11: }\n12: }\n```",
       "options": {
         "A": "Stream<String> resultStream",
         "B": "stream2.collect(Collectors.toList())); Stream.concat(stream1, stream2); stream1.concat(stream2);",
@@ -1532,13 +1532,13 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 8,
-      "question": "Which of the following lines of code uses the reduce method to correctly calculate the product\nof all elements in a stream of integers?\n```java\nimport java.util.List;\nimport java.util.stream.Stream;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<Integer> numbers = List.of(1, 2, 3, 4, 5);\nStream<Integer> stream = numbers.stream();\n// Insert code here to calculate the product\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code uses the reduce method to correctly calculate the product\nof all elements in a stream of integers?\n```java\n1: import java.util.List;\n2: import java.util.stream.Stream;\n3: public class Main {\n4: public static void main(String[] args) {\n5: List<Integer> numbers = List.of(1, 2, 3, 4, 5);\n6: Stream<Integer> stream = numbers.stream();\n7: // Insert code here to calculate the product\n8: }\n9: }\n```",
       "options": {
         "A": "int product = stream.reduce(1, (a, b) -> a + b);",
         "B": "int product = stream.reduce((a, b) -> a * b);",
-        "C": "```java\nint product = stream.reduce(0, (a, b) -> a *\n```\nb);",
+        "C": "```java\n1: int product = stream.reduce(0, (a, b) -> a *\n```\nb);",
         "D": "Optional<Integer> product = stream.reduce(1, (a, b) -> a * b);",
-        "E": "int\n```java\nproduct = stream.reduce(1, (a, b) -> a * b, (a, b) -> a * b);\n```"
+        "E": "int\n```java\n1: product = stream.reduce(1, (a, b) -> a * b, (a, b) -> a * b);\n```"
       },
       "correct_answers": [
         "E"
@@ -1549,7 +1549,7 @@
     {
       "topic": "Chapter 9: Streams",
       "question_number": 9,
-      "question": "Which of the following lines of code correctly collects the elements of a stream into a Set and\nalso ensures that the original order of the elements is maintained?\n```java\nimport java.util.List;\nimport java.util.Set;\nimport java.util.stream.Collectors;\nimport java.util.stream.Stream;\nimport java.util.LinkedHashSet;\npublic class Main {\npublic static void main(String[] args) {\n```\nList<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\nStream<String> stream = list.stream();\n// Insert code here to collect the elements into a Set while maintaining order\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly collects the elements of a stream into a Set and\nalso ensures that the original order of the elements is maintained?\n```java\n 1: import java.util.List;\n 2: import java.util.Set;\n 3: import java.util.stream.Collectors;\n 4: import java.util.stream.Stream;\n 5: import java.util.LinkedHashSet;\n 6: public class Main {\n 7: public static void main(String[] args) {\n 8: List<String> list = List.of(\"apple\", \"banana\", \"cherry\", \"date\");\n 9: Stream<String> stream = list.stream();\n10: // Insert code here to collect the elements into a Set while maintaining order\n11: }\n12: }\n```",
       "options": {
         "A": "Set<String> resultSet = Set<String> stream.collect(Collectors.toSet()); resultSet stream.collect(Collectors.toCollection(LinkedHashSet::new)); resultSet = Set<String>",
         "B": "=",
@@ -1566,7 +1566,7 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 1,
-      "question": "Which of the following lines of code correctly creates and starts a new virtual thread?\n```java\npublic class Main {\npublic static void main(String[] args) {\n```\nRunnable task = () -> {\n```java\nfor (int i = 0; i < 5; i++) {\n```\nSystem.out.println(\"Task is running\");\n```java\n}\n```\n};\n// Insert code here to create and start a new virtual thread\n```java\n}\n}\n```",
+      "question": "Which of the following lines of code correctly creates and starts a new virtual thread?\n```java\n 1: public class Main {\n 2: public static void main(String[] args) {\n 3: Runnable task = () -> {\n 4: for (int i = 0; i < 5; i++) {\n 5: System.out.println(\"Task is running\");\n 6: }\n 7: };\n 8: // Insert code here to create and start a new virtual thread\n 9: }\n10: }\n```",
       "options": {
         "A": "Thread thread = Thread.ofVirtual(); Thread.ofVirtual().unstarted(task).run(); thread.start(task);",
         "B": "Thread",
@@ -1583,12 +1583,12 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 2,
-      "question": "Which of the options correctly uses a synchronized block to ensure that only one thread at a\ntime can execute a critical section that increments a shared counter?\n```java\npublic class Main {\nprivate static int counter = 0;\npublic static void main(String[] args) {\n```\nRunnable task = () -> {\n```java\nfor (int i = 0; i < 1000; i++) {\n```\n// Insert synchronized block here\n```java\n}\n```\n};\nThread thread1 = Thread.ofPlatform().start(task);\nThread thread2 = Thread.ofPlatform().start(task);\n```java\ntry {\n```\nthread1.join();\nthread2.join();\n} catch (InterruptedException e) {\ne.printStackTrace();\n```java\n}\n```\nSystem.out.println(\"Final counter value: \" + counter);\n```java\n}\n}\n```",
+      "question": "Which of the options correctly uses a synchronized block to ensure that only one thread at a\ntime can execute a critical section that increments a shared counter?\n```java\n 1: public class Main {\n 2: private static int counter = 0;\n 3: public static void main(String[] args) {\n 4: Runnable task = () -> {\n 5: for (int i = 0; i < 1000; i++) {\n 6: // Insert synchronized block here\n 7: }\n 8: };\n 9: Thread thread1 = Thread.ofPlatform().start(task);\n10: Thread thread2 = Thread.ofPlatform().start(task);\n11: try {\n12: thread1.join();\n13: thread2.join();\n14: } catch (InterruptedException e) {\n15: e.printStackTrace();\n16: }\n17: System.out.println(\"Final counter value: \" + counter);\n18: }\n19: }\n```",
       "options": {
         "A": "synchronized (this) { counter++; }",
         "B": "synchronized (Main.class) { counter++; }",
-        "C": "synchronized\n(task)\n```java\n{\n```\ncounter++;\n```java\n}\n```",
-        "D": "synchronized\n(counter)\n```java\n{\n```\ncounter++;\n```java\n}\n```",
+        "C": "synchronized\n(task)\n```java\n1: {\n2: counter++;\n3: }\n```",
+        "D": "synchronized\n(counter)\n```java\n1: {\n2: counter++;\n3: }\n```",
         "E": "synchronized (System.out) { counter++; }"
       },
       "correct_answers": [
@@ -1617,12 +1617,12 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 4,
-      "question": "Which of the following code snippets correctly uses the Lock interface to ensure thread-safe\naccess to a shared resource?\n```java\nimport java.util.concurrent.locks.Lock;\nimport java.util.concurrent.locks.ReentrantLock;\npublic class Counter {\nprivate int count = 0;\nprivate Lock lock = new ReentrantLock();\npublic void increment() {\n```\n// Insert code here\n```java\n}\npublic int getCount() {\nreturn count;\n}\n}\n```",
+      "question": "Which of the following code snippets correctly uses the Lock interface to ensure thread-safe\naccess to a shared resource?\n```java\n 1: import java.util.concurrent.locks.Lock;\n 2: import java.util.concurrent.locks.ReentrantLock;\n 3: public class Counter {\n 4: private int count = 0;\n 5: private Lock lock = new ReentrantLock();\n 6: public void increment() {\n 7: // Insert code here\n 8: }\n 9: public int getCount() {\n10: return count;\n11: }\n12: }\n```",
       "options": {
-        "A": "lock.lock();\n```java\ntry {\n```\ncount++;\n} finally {\nlock.unlock();\n```java\n}\n```",
+        "A": "lock.lock();\n```java\n1: try {\n2: count++;\n3: } finally {\n4: lock.unlock();\n5: }\n```",
         "B": "lock.lock(); count++; lock.unlock();",
-        "C": "```java\ntry {\n```\nlock.lock(() -> {\ncount++;\n});\n} finally {\nlock.unlock();\n```java\n}\n```",
-        "D": "```java\nsynchronized(lock) {\n```\ncount++;\n```java\n}\n```"
+        "C": "```java\n1: try {\n2: lock.lock(() -> {\n3: count++;\n4: });\n5: } finally {\n6: lock.unlock();\n7: }\n```",
+        "D": "```java\n1: synchronized(lock) {\n2: count++;\n3: }\n```"
       },
       "correct_answers": [
         "A"
@@ -1633,12 +1633,12 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 5,
-      "question": "Which of the following code snippets correctly demonstrates the usage of an\nExecutorService with a try-with-resources block?\n```java\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.TimeUnit;\npublic class ExecutorExample {\npublic static void main(String[] args) {\n```\n// Insert code here to create and use an ExecutorService with try-with-resources\n```java\n}\n}\n```",
+      "question": "Which of the following code snippets correctly demonstrates the usage of an\nExecutorService with a try-with-resources block?\n```java\n1: import java.util.concurrent.ExecutorService;\n2: import java.util.concurrent.Executors;\n3: import java.util.concurrent.TimeUnit;\n4: public class ExecutorExample {\n5: public static void main(String[] args) {\n6: // Insert code here to create and use an ExecutorService with try-with-resources\n7: }\n8: }\n```",
       "options": {
-        "A": "```java\ntry (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nexecutor.submit(() -> System.out.println(\"Task executed\"));\n```java\n}\n```",
-        "B": "```java\ntry (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nexecutor.submit(() -> System.out.println(\"Task executed\"));\n} finally {\nexecutor.shutdown();\n```java\n}\n```",
-        "C": "ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();\n```java\ntry {\n```\nexecutor.submit(() -> System.out.println(\"Task executed\"));\n} finally {\nexecutor.close();\n```java\n}\n```",
-        "D": "```java\ntry (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nexecutor.submit(() -> System.out.println(\"Task executed\"));\nexecutor.awaitTermination(1, TimeUnit.SECONDS);\n```java\n}\n```"
+        "A": "```java\n1: try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: executor.submit(() -> System.out.println(\"Task executed\"));\n3: }\n```",
+        "B": "```java\n1: try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: executor.submit(() -> System.out.println(\"Task executed\"));\n3: } finally {\n4: executor.shutdown();\n5: }\n```",
+        "C": "ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();\n```java\n1: try {\n2: executor.submit(() -> System.out.println(\"Task executed\"));\n3: } finally {\n4: executor.close();\n5: }\n```",
+        "D": "```java\n1: try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: executor.submit(() -> System.out.println(\"Task executed\"));\n3: executor.awaitTermination(1, TimeUnit.SECONDS);\n4: }\n```"
       },
       "correct_answers": [
         "A"
@@ -1649,12 +1649,12 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 6,
-      "question": "Which of the following code snippets correctly demonstrates how to get a result from a\nCallable task using an ExecutorService with try-with-resources?\n```java\nimport java.util.concurrent.Callable;\nimport java.util.concurrent.ExecutionException;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.Future;\nimport java.util.concurrent.TimeUnit;\npublic class CallableExample {\npublic static void main(String[] args) {\n```\nCallable<Integer> task = () -> {\n```java\nreturn 123;\n```\n};\n// Insert code here\n```java\n}\n}\n```",
+      "question": "Which of the following code snippets correctly demonstrates how to get a result from a\nCallable task using an ExecutorService with try-with-resources?\n```java\n 1: import java.util.concurrent.Callable;\n 2: import java.util.concurrent.ExecutionException;\n 3: import java.util.concurrent.ExecutorService;\n 4: import java.util.concurrent.Executors;\n 5: import java.util.concurrent.Future;\n 6: import java.util.concurrent.TimeUnit;\n 7: public class CallableExample {\n 8: public static void main(String[] args) {\n 9: Callable<Integer> task = () -> {\n10: return 123;\n11: };\n12: // Insert code here\n13: }\n14: }\n```",
       "options": {
-        "A": "```java\ntry (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nFuture<Integer> future = executor.submit(task);\nSystem.out.println(future.get());\n```java\n}\n```",
-        "B": "```java\ntry (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nFuture<Integer> future = executor.submit(task);\nInteger result = future.get(1, TimeUnit.SECONDS);\nSystem.out.println(result);\n```java\n}\n```",
-        "C": "```java\ntry (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nFuture<Integer> future = executor.submit(task);\nexecutor.shutdown();\nSystem.out.println(future.get());\n```java\n}\n```",
-        "D": "```java\ntry (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n```\nFuture<Integer> future = executor.submit(task);\n```java\ntry {\n```\nInteger result = future.get();\nSystem.out.println(result);\n} catch (InterruptedException | ExecutionException e) {\n// Handle exceptions\n```java\n}\n}\n```"
+        "A": "```java\n1: try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: Future<Integer> future = executor.submit(task);\n3: System.out.println(future.get());\n4: }\n```",
+        "B": "```java\n1: try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: Future<Integer> future = executor.submit(task);\n3: Integer result = future.get(1, TimeUnit.SECONDS);\n4: System.out.println(result);\n5: }\n```",
+        "C": "```java\n1: try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: Future<Integer> future = executor.submit(task);\n3: executor.shutdown();\n4: System.out.println(future.get());\n5: }\n```",
+        "D": "```java\n1: try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {\n2: Future<Integer> future = executor.submit(task);\n3: try {\n4: Integer result = future.get();\n5: System.out.println(result);\n6: } catch (InterruptedException | ExecutionException e) {\n7: // Handle exceptions\n8: }\n9: }\n```"
       },
       "correct_answers": [
         "D"
@@ -1697,12 +1697,12 @@
     {
       "topic": "Chapter 10: Concurrency and Multithreading",
       "question_number": 9,
-      "question": "Which of the following code snippets correctly demonstrates how to reduce a parallel stream\nto compute the sum of its elements?\n```java\nimport java.util.Arrays;\nimport java.util.List;\npublic class ParallelStreamExample {\npublic static void main(String[] args) {\n```\nList<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);\n// Insert code here\n```java\n}\n}\n```",
+      "question": "Which of the following code snippets correctly demonstrates how to reduce a parallel stream\nto compute the sum of its elements?\n```java\n1: import java.util.Arrays;\n2: import java.util.List;\n3: public class ParallelStreamExample {\n4: public static void main(String[] args) {\n5: List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);\n6: // Insert code here\n7: }\n8: }\n```",
       "options": {
-        "A": "```java\nint sum = numbers.parallelStream().reduce(1, Integer::sum);\n```\nSystem.out.println(sum);",
-        "B": "```java\nint sum = numbers.parallelStream().reduce(0, Integer::sum);\n```\nSystem.out.println(sum);",
-        "C": "```java\nint sum = numbers.stream().reduce(0, Integer::sum);\n```\nSystem.out.println(sum);",
-        "D": "```java\nint sum = numbers.parallelStream().collect(reduce(0, Integer::sum));\n```\nSystem.out.println(sum);"
+        "A": "```java\n1: int sum = numbers.parallelStream().reduce(1, Integer::sum);\n```\nSystem.out.println(sum);",
+        "B": "```java\n1: int sum = numbers.parallelStream().reduce(0, Integer::sum);\n```\nSystem.out.println(sum);",
+        "C": "```java\n1: int sum = numbers.stream().reduce(0, Integer::sum);\n```\nSystem.out.println(sum);",
+        "D": "```java\n1: int sum = numbers.parallelStream().collect(reduce(0, Integer::sum));\n```\nSystem.out.println(sum);"
       },
       "correct_answers": [
         "B"
@@ -1781,10 +1781,10 @@
       "question_number": 5,
       "question": "Which of the following options is a valid way to get the nanoseconds part of an Instant object\nreferenced by i?",
       "options": {
-        "A": "```java\nint nanos = i.getNano();\n```",
-        "B": "```java\nlong nanos = i.get(ChronoField.NANOS);\n```",
+        "A": "```java\n1: int nanos = i.getNano();\n```",
+        "B": "```java\n1: long nanos = i.get(ChronoField.NANOS);\n```",
         "C": "long nanos = i.get(ChronoUnit.NANOS);",
-        "D": "```java\nint nanos = i.getEpochNano();\n```"
+        "D": "```java\n1: int nanos = i.getEpochNano();\n```"
       },
       "correct_answers": [
         "A"
@@ -1956,7 +1956,7 @@
     {
       "topic": "Chapter 12: File I/O and Serialization",
       "question_number": 1,
-      "question": "What is the result of the following code snippet?\n```java\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\npublic class PathExample {\npublic static void main(String[] args) {\n```\nPath basePath = Paths.get(\"/home/user\");\nPath relativePath = Paths.get(\"documents/notes.txt\");\nPath resultPath = basePath.resolve(relativePath);\nSystem.out.println(resultPath);\n```java\n}\n}\n```",
+      "question": "What is the result of the following code snippet?\n```java\n 1: import java.nio.file.Path;\n 2: import java.nio.file.Paths;\n 3: public class PathExample {\n 4: public static void main(String[] args) {\n 5: Path basePath = Paths.get(\"/home/user\");\n 6: Path relativePath = Paths.get(\"documents/notes.txt\");\n 7: Path resultPath = basePath.resolve(relativePath);\n 8: System.out.println(resultPath);\n 9: }\n10: }\n```",
       "options": {
         "A": "/home/user",
         "B": "/home/user/documents",
@@ -1972,7 +1972,7 @@
     {
       "topic": "Chapter 12: File I/O and Serialization",
       "question_number": 2,
-      "question": "What is the result of the following code snippet?\n```java\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\npublic class PathExample {\npublic static void main(String[] args) {\n```\nPath path = Paths.get(\"/home/user/../documents/./notes.txt\");\nPath normalizedPath = path.normalize();\nSystem.out.println(normalizedPath);\n```java\n}\n}\n```",
+      "question": "What is the result of the following code snippet?\n```java\n1: import java.nio.file.Path;\n2: import java.nio.file.Paths;\n3: public class PathExample {\n4: public static void main(String[] args) {\n5: Path path = Paths.get(\"/home/user/../documents/./notes.txt\");\n6: Path normalizedPath = path.normalize();\n7: System.out.println(normalizedPath);\n8: }\n9: }\n```",
       "options": {
         "A": "/home/user/../documents/./notes.txt",
         "B": "/home/user/documents/notes.txt",
@@ -2070,10 +2070,10 @@
       "question_number": 8,
       "question": "Which of the following code snippets correctly traverses a directory tree using the\nFiles.walkFileTree method in Java?",
       "options": {
-        "A": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\npublic FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\nreturn FileVisitResult.SKIP_SUBTREE;\n}\n```\n});",
-        "B": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\npublic FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\nthrow new IOException(\"Error visiting file\");\n}\n```\n});",
-        "C": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\npublic FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n```\nSystem.out.println(\"Visited file: \" + file);\n```java\nreturn FileVisitResult.TERMINATE;\n}\n```\n});",
-        "D": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisito\n@Override\n```java\npublic FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n```\nSystem.out.println(\"Visited file: \" + file);\n```java\nreturn FileVisitResult.CONTINUE;\n}\n```\n@Override\n```java\npublic FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {\nreturn FileVisitResult.CONTINUE;\n}\n```\n@Override\n```java\npublic FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {\nreturn FileVisitResult.CONTINUE;\n}\n```\n@Override\n```java\npublic FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {\nreturn FileVisitResult.CONTINUE;\n}\n```\n});"
+        "A": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\n1: public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n2: return FileVisitResult.SKIP_SUBTREE;\n3: }\n```\n});",
+        "B": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\n1: public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n2: throw new IOException(\"Error visiting file\");\n3: }\n```\n});",
+        "C": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, new SimpleFileVisitor<Path>() {\n@Override\n```java\n1: public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n2: System.out.println(\"Visited file: \" + file);\n3: return FileVisitResult.TERMINATE;\n4: }\n```\n});",
+        "D": "Path start = Paths.get(\"start_directory\");\nFiles.walkFileTree(start, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisito\n@Override\n```java\n 1: public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {\n 2: System.out.println(\"Visited file: \" + file);\n 3: return FileVisitResult.CONTINUE;\n 4: }\n 5: @Override\n 6: public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {\n 7: return FileVisitResult.CONTINUE;\n 8: }\n 9: @Override\n10: public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {\n11: return FileVisitResult.CONTINUE;\n12: }\n13: @Override\n14: public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {\n15: return FileVisitResult.CONTINUE;\n16: }\n```\n});"
       },
       "correct_answers": [
         "D"
@@ -2086,10 +2086,10 @@
       "question_number": 9,
       "question": "Which of the following code snippets correctly serializes an object to a file?",
       "options": {
-        "A": "```java\nclass Animal implements Serializable {\nprivate static final long serialVersionUID = 1L;\nprivate String species;\nprivate int age;\npublic Animal(String species, int age) {\n```\nthis.species = species;\nthis.age = age;\n```java\n}\n}\n```\nAnimal animal = new Animal(\"Lion\", 5);\n```java\ntry (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"animal.ser\"))) {\n```\nois.writeObject(animal);\n} catch (IOException e) {\ne.printStackTrace();\n```java\n}\n```",
-        "B": "```java\nclass Animal implements Serializable {\nprivate static final long serialVersionUID = 1L;\nprivate String species;\nprivate int age;\npublic Animal(String species, int age) {\n```\nthis.species = species;\nthis.age = age;\n```java\n}\n}\n```\nAnimal animal = new Animal(\"Lion\", 5);\n```java\ntry (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"animal.ser\"))) {\n```\noos.writeObject(animal);\n} catch (IOException e) {\ne.printStackTrace();\n```java\n}\n```",
-        "C": "```java\nclass Animal {\nprivate String species;\nprivate int age;\npublic Animal(String species, int age) {\n```\nthis.species = species;\nthis.age = age;\n```java\n}\n}\n```\nAnimal animal = new Animal(\"Lion\", 5);\n```java\ntry (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"animal.ser\"))) {\n```\noos.writeObject(animal);\n} catch (IOException e) {\ne.printStackTrace();\n```java\n}\n```",
-        "D": "```java\nclass Animal implements Serializable {\nprivate static final long serialVersionUID = 1L;\nprivate String species;\nprivate int age;\npublic Animal(String species, int age) {\n```\nthis.species = species;\nthis.age = age;\n```java\n}\n}\n```\nAnimal animal = new Animal(\"Lion\", 5);\n```java\ntry (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(\"animal.ser\"))) {\n```\nbos.write(animal);\n} catch (IOException e) {\ne.printStackTrace();\n```java\n}\n```"
+        "A": "```java\n 1: class Animal implements Serializable {\n 2: private static final long serialVersionUID = 1L;\n 3: private String species;\n 4: private int age;\n 5: public Animal(String species, int age) {\n 6: this.species = species;\n 7: this.age = age;\n 8: }\n 9: }\n10: Animal animal = new Animal(\"Lion\", 5);\n11: try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"animal.ser\"))) {\n12: ois.writeObject(animal);\n13: } catch (IOException e) {\n14: e.printStackTrace();\n15: }\n```",
+        "B": "```java\n 1: class Animal implements Serializable {\n 2: private static final long serialVersionUID = 1L;\n 3: private String species;\n 4: private int age;\n 5: public Animal(String species, int age) {\n 6: this.species = species;\n 7: this.age = age;\n 8: }\n 9: }\n10: Animal animal = new Animal(\"Lion\", 5);\n11: try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"animal.ser\"))) {\n12: oos.writeObject(animal);\n13: } catch (IOException e) {\n14: e.printStackTrace();\n15: }\n```",
+        "C": "```java\n 1: class Animal {\n 2: private String species;\n 3: private int age;\n 4: public Animal(String species, int age) {\n 5: this.species = species;\n 6: this.age = age;\n 7: }\n 8: }\n 9: Animal animal = new Animal(\"Lion\", 5);\n10: try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"animal.ser\"))) {\n11: oos.writeObject(animal);\n12: } catch (IOException e) {\n13: e.printStackTrace();\n14: }\n```",
+        "D": "```java\n 1: class Animal implements Serializable {\n 2: private static final long serialVersionUID = 1L;\n 3: private String species;\n 4: private int age;\n 5: public Animal(String species, int age) {\n 6: this.species = species;\n 7: this.age = age;\n 8: }\n 9: }\n10: Animal animal = new Animal(\"Lion\", 5);\n11: try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(\"animal.ser\"))) {\n12: bos.write(animal);\n13: } catch (IOException e) {\n14: e.printStackTrace();\n15: }\n```"
       },
       "correct_answers": [
         "B"
@@ -2139,9 +2139,9 @@
       "options": {
         "A": "module com.example { exports com.example.internal to com.example.client; }",
         "B": "module com.example { opens com.example.internal to com.example.client; }",
-        "C": "module\ncom.example\n```java\n{\n```\nrequires\ncom.example.internal\nto\ncom.example.internal;\ncom.example.client;\n```java\n}\n```",
-        "D": "module\n```java\n}\n```",
-        "E": "com.example\nmodule\n```java\n{\n```\ncom.example\nprovides\n```java\n{\n```\nuses\ncom.example.internal; }"
+        "C": "module\ncom.example\n```java\n1: {\n2: requires\n3: com.example.internal\n4: to\n5: com.example.internal;\n6: com.example.client;\n7: }\n```",
+        "D": "module\n```java\n1: }\n```",
+        "E": "com.example\nmodule\n```java\n1: {\n2: com.example\n3: provides\n4: {\n```\nuses\ncom.example.internal; }"
       },
       "correct_answers": [
         "A"
@@ -2152,7 +2152,7 @@
     {
       "topic": "Chapter 13: Java Platform Module System",
       "question_number": 4,
-      "question": "Given the following module declarations, which statement is correct regarding the\naccessibility of the com.example.api package for deep reflection by the com.example.client\nmodule?\nmodule com.example {\nexports com.example.api;\nopens com.example.internal to com.example.client;\n```java\n}\n```\nmodule com.example.client {\nrequires com.example;\n```java\n}\n```",
+      "question": "Given the following module declarations, which statement is correct regarding the\naccessibility of the com.example.api package for deep reflection by the com.example.client\nmodule?\nmodule com.example {\nexports com.example.api;\nopens com.example.internal to com.example.client;\n```java\n1: }\n2: module com.example.client {\n3: requires com.example;\n4: }\n```",
       "options": {
         "A": "The com.example.client module can access the com.example.api package for deep reflection.",
         "B": "The com.example.client module cannot access the com.example.api package for deep reflection.",
@@ -2317,7 +2317,7 @@
     {
       "topic": "Chapter 14: Localization",
       "question_number": 1,
-      "question": "Consider the following code snippet:\n```java\nimport java.util.Locale;\npublic class LocaleTest {\npublic static void main(String[] args) {\n```\nLocale locale1 = new Locale(\"fr\", \"CA\");\nLocale locale2 = new Locale(\"fr\", \"CA\", \"UNIX2024\");\nLocale locale3 = Locale.CANADA_FRENCH;\nSystem.out.println(locale1.equals(locale2));\nSystem.out.println(locale1.equals(locale3));\nSystem.out.println(locale2.equals(locale3));\nSystem.out.println(locale1.getDisplayName(Locale.ENGLISH));\nSystem.out.println(locale2.getDisplayName(Locale.ENGLISH));\nSystem.out.println(locale3.getDisplayName(Locale.ENGLISH));\n```java\n}\n}\n```\nWhat will be the output when this code is executed?",
+      "question": "Consider the following code snippet:\n```java\n 1: import java.util.Locale;\n 2: public class LocaleTest {\n 3: public static void main(String[] args) {\n 4: Locale locale1 = new Locale(\"fr\", \"CA\");\n 5: Locale locale2 = new Locale(\"fr\", \"CA\", \"UNIX2024\");\n 6: Locale locale3 = Locale.CANADA_FRENCH;\n 7: System.out.println(locale1.equals(locale2));\n 8: System.out.println(locale1.equals(locale3));\n 9: System.out.println(locale2.equals(locale3));\n10: System.out.println(locale1.getDisplayName(Locale.ENGLISH));\n11: System.out.println(locale2.getDisplayName(Locale.ENGLISH));\n12: System.out.println(locale3.getDisplayName(Locale.ENGLISH));\n13: }\n14: }\n```\nWhat will be the output when this code is executed?",
       "options": {
         "A": "true true true French (Canada) French (Canada) French (Canada)",
         "B": "false true false French (Canada) French (Canada, UNIX2024) French (Canada)",
@@ -2368,7 +2368,7 @@
     {
       "topic": "Chapter 14: Localization",
       "question_number": 4,
-      "question": "Consider the following code snippet:\n```java\nimport java.util.*;\nimport java.io.*;\npublic class ConfigTest {\npublic static void main(String[] args) throws IOException {\n```\nProperties props = new Properties();\nprops.setProperty(\"color\", \"blue\");\nprops.setProperty(\"size\", \"medium\");\n```java\ntry (OutputStream out = new FileOutputStream(\"config.properties\")) {\n```\nprops.store(out, \"Config File\");\n```java\n}\n```\nprops.clear();\nSystem.out.println(props.getProperty(\"color\", \"red\"));\n```java\ntry (InputStream in = new FileInputStream(\"config.properties\")) {\n```\nprops.load(in);\n```java\n}\n```\nSystem.out.println(props.getProperty(\"color\", \"red\"));\n```java\n}\n}\n```\nWhat will be the output when this code is executed?",
+      "question": "Consider the following code snippet:\n```java\n 1: import java.util.*;\n 2: import java.io.*;\n 3: public class ConfigTest {\n 4: public static void main(String[] args) throws IOException {\n 5: Properties props = new Properties();\n 6: props.setProperty(\"color\", \"blue\");\n 7: props.setProperty(\"size\", \"medium\");\n 8: try (OutputStream out = new FileOutputStream(\"config.properties\")) {\n 9: props.store(out, \"Config File\");\n10: }\n11: props.clear();\n12: System.out.println(props.getProperty(\"color\", \"red\"));\n13: try (InputStream in = new FileInputStream(\"config.properties\")) {\n14: props.load(in);\n15: }\n16: System.out.println(props.getProperty(\"color\", \"red\"));\n17: }\n18: }\n```\nWhat will be the output when this code is executed?",
       "options": {
         "A": "red blue",
         "B": "blue blue",
@@ -2385,7 +2385,7 @@
     {
       "topic": "Chapter 14: Localization",
       "question_number": 5,
-      "question": "Consider the following code snippet:\n```java\nimport java.text.MessageFormat;\nimport java.util.Date;\nimport java.util.Locale;\npublic class MessageFormatTest {\npublic static void main(String[] args) {\n```\nString pattern = \"On {0, date, long}, {1} bought {2,number,integer} {3} for {4,number,currency}.\nObject[] params = {\n```java\nnew Date(),\n```\n\"Alice\",\n3,\n\"apples\",\n19.99\n};\nMessageFormat mf = new MessageFormat(pattern, Locale.US);\nString result = mf.format(params);\nSystem.out.println(result);\n```java\n}\n}\n```\nWhich of the following statements about this code is correct?",
+      "question": "Consider the following code snippet:\n```java\n 1: import java.text.MessageFormat;\n 2: import java.util.Date;\n 3: import java.util.Locale;\n 4: public class MessageFormatTest {\n 5: public static void main(String[] args) {\n 6: String pattern = \"On {0, date, long}, {1} bought {2,number,integer} {3} for {4,number,currency}.\n 7: Object[] params = {\n 8: new Date(),\n 9: \"Alice\",\n10: 3,\n11: \"apples\",\n12: 19.99\n13: };\n14: MessageFormat mf = new MessageFormat(pattern, Locale.US);\n15: String result = mf.format(params);\n16: System.out.println(result);\n17: }\n18: }\n```\nWhich of the following statements about this code is correct?",
       "options": {
         "A": "The code will throw a IllegalArgumentException because the date format is invalid.",
         "B": "The output will include the date in long format, the name \"Alice\", the number 3, the word \"apples\", and the price in US currency format.",
@@ -2419,7 +2419,7 @@
     {
       "topic": "Chapter 14: Localization",
       "question_number": 7,
-      "question": "Consider the following code snippet:\n```java\nimport java.time.LocalDateTime;\nimport java.time.ZoneId;\nimport java.time.ZonedDateTime;\nimport java.time.format.DateTimeFormatter;\npublic class DateTimeFormatterTest {\npublic static void main(String[] args) {\n```\nLocalDateTime ldt = LocalDateTime.of(2023, 6, 15, 10, 30);\nZoneId zoneNY = ZoneId.of(\"America/New_York\");\nZonedDateTime zdtNY = ldt.atZone(zoneNY);\nDateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm z VV\");\nSystem.out.println(formatter.format(zdtNY));\nZoneId zoneTokyo = ZoneId.of(\"Asia/Tokyo\");\nZonedDateTime zdtTokyo = zdtNY.withZoneSameInstant(zoneTokyo);\nSystem.out.println(formatter.format(zdtTokyo));\n```java\n}\n}\n```\nWhat will be the output when this code is executed?",
+      "question": "Consider the following code snippet:\n```java\n 1: import java.time.LocalDateTime;\n 2: import java.time.ZoneId;\n 3: import java.time.ZonedDateTime;\n 4: import java.time.format.DateTimeFormatter;\n 5: public class DateTimeFormatterTest {\n 6: public static void main(String[] args) {\n 7: LocalDateTime ldt = LocalDateTime.of(2023, 6, 15, 10, 30);\n 8: ZoneId zoneNY = ZoneId.of(\"America/New_York\");\n 9: ZonedDateTime zdtNY = ldt.atZone(zoneNY);\n10: DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm z VV\");\n11: System.out.println(formatter.format(zdtNY));\n12: ZoneId zoneTokyo = ZoneId.of(\"Asia/Tokyo\");\n13: ZonedDateTime zdtTokyo = zdtNY.withZoneSameInstant(zoneTokyo);\n14: System.out.println(formatter.format(zdtTokyo));\n15: }\n16: }\n```\nWhat will be the output when this code is executed?",
       "options": {
         "A": "2023-06-15 10:30 EDT America/New_York 2023-06-15 23:30 JST Asia/Tokyo",
         "B": "2023-06-15 10:30 EDT New_York 2023-06-15 23:30 JST Tokyo",
